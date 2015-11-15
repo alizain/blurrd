@@ -1,0 +1,917 @@
+
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: http://ogp.me/ns#">
+<head>
+<meta charset="UTF-8"><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({QJf3ax:[function(e,n){function t(e){function n(n,t,a){e&&e(n,t,a),a||(a={});for(var u=c(n),f=u.length,s=i(a,o,r),p=0;f>p;p++)u[p].apply(s,t);return s}function a(e,n){f[e]=c(e).concat(n)}function c(e){return f[e]||[]}function u(){return t(n)}var f={};return{on:a,emit:n,create:u,listeners:c,_events:f}}function r(){return{}}var o="nr@context",i=e("gos");n.exports=t()},{gos:"7eSDFh"}],ee:[function(e,n){n.exports=e("QJf3ax")},{}],3:[function(e,n){function t(e){return function(){r(e,[(new Date).getTime()].concat(i(arguments)))}}var r=e("handle"),o=e(1),i=e(2);"undefined"==typeof window.newrelic&&(newrelic=window.NREUM);var a=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit","noticeError"];o(a,function(e,n){window.NREUM[n]=t("api-"+n)}),n.exports=window.NREUM},{1:12,2:13,handle:"D5DuLP"}],gos:[function(e,n){n.exports=e("7eSDFh")},{}],"7eSDFh":[function(e,n){function t(e,n,t){if(r.call(e,n))return e[n];var o=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return e[n]=o,o}var r=Object.prototype.hasOwnProperty;n.exports=t},{}],D5DuLP:[function(e,n){function t(e,n,t){return r.listeners(e).length?r.emit(e,n,t):void(r.q&&(r.q[e]||(r.q[e]=[]),r.q[e].push(n)))}var r=e("ee").create();n.exports=t,t.ee=r,r.q={}},{ee:"QJf3ax"}],handle:[function(e,n){n.exports=e("D5DuLP")},{}],XL7HBI:[function(e,n){function t(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:i(e,o,function(){return r++})}var r=1,o="nr@id",i=e("gos");n.exports=t},{gos:"7eSDFh"}],id:[function(e,n){n.exports=e("XL7HBI")},{}],G9z0Bl:[function(e,n){function t(){var e=d.info=NREUM.info,n=f.getElementsByTagName("script")[0];if(e&&e.licenseKey&&e.applicationID&&n){c(p,function(n,t){n in e||(e[n]=t)});var t="https"===s.split(":")[0]||e.sslForHttp;d.proto=t?"https://":"http://",a("mark",["onload",i()]);var r=f.createElement("script");r.src=d.proto+e.agent,n.parentNode.insertBefore(r,n)}}function r(){"complete"===f.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=e("handle"),c=e(1),u=window,f=u.document;e(2);var s=(""+location).split("?")[0],p={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-768.min.js"},d=n.exports={offset:i(),origin:s,features:{}};f.addEventListener?(f.addEventListener("DOMContentLoaded",o,!1),u.addEventListener("load",t,!1)):(f.attachEvent("onreadystatechange",r),u.attachEvent("onload",t)),a("mark",["firstbyte",i()])},{1:12,2:3,handle:"D5DuLP"}],loader:[function(e,n){n.exports=e("G9z0Bl")},{}],12:[function(e,n){function t(e,n){var t=[],o="",i=0;for(o in e)r.call(e,o)&&(t[i]=n(o,e[o]),i+=1);return t}var r=Object.prototype.hasOwnProperty;n.exports=t},{}],13:[function(e,n){function t(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(0>o?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=t},{}]},{},["G9z0Bl"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="format-detection" content="telephone=no"/>
+<meta name="HandheldFriendly" content="True"/>
+<meta name="apple-mobile-web-app-title" content="Toronto Life"/>
+<meta name="application-name" content="Toronto Life"/>
+<meta name="msapplication-TileColor" content="#ee3124"/>
+<meta name="theme-color" content="#ee3124">
+<meta name="msapplication-TileImage" content="http://cdn.torontolife.com/wp-content/themes/sjm-underscores/img/windows_tile_144_b.png"/>
+
+<link rel="shortcut icon" href="http://cdn.torontolife.com/wp-content/themes/sjm-underscores/img/favicon.ico"/>
+<link rel="apple-touch-icon" sizes="152x152" href="http://cdn.torontolife.com/wp-content/themes/sjm-underscores/img/152x152.png"/>
+<link rel="apple-touch-icon" sizes="144x144" href="http://cdn.torontolife.com/wp-content/themes/sjm-underscores/img/144x144.png"/>
+<link rel="apple-touch-icon" sizes="120x120" href="http://cdn.torontolife.com/wp-content/themes/sjm-underscores/img/120x120.png"/>
+<link rel="apple-touch-icon" sizes="114x114" href="http://cdn.torontolife.com/wp-content/themes/sjm-underscores/img/114x114.png"/>
+<link rel="apple-touch-icon" sizes="72x72" href="http://cdn.torontolife.com/wp-content/themes/sjm-underscores/img/72x72.png"/>
+<link rel="apple-touch-icon-precomposed" href="http://cdn.torontolife.com/wp-content/themes/sjm-underscores/img/57x57.png"/>
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="http://torontolife.com/xmlrpc.php">
+
+
+<title>Chef Anthony Rose&#039;s restaurant empire | Toronto Life</title>
+
+<!-- This site is optimized with the Yoast SEO plugin v2.3.5 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="description" content="With five trendy spots (and another on the way), he&#039;s the Judd Apatow of our city&#039;s restaurant scene"/>
+<link rel="canonical" href="http://torontolife.com/food/restaurants/chef-anthony-rose-and-sons-swan-diner-trinity-bellwoods-queen-west/" />
+<link rel="publisher" href="https://plus.google.com/+Torontolifemag/"/>
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Chef Anthony Rose&#039;s restaurant empire | Toronto Life" />
+<meta property="og:description" content="With five trendy spots (and another on the way), he&#039;s the Judd Apatow of our city&#039;s restaurant scene" />
+<meta property="og:url" content="http://torontolife.com/food/restaurants/chef-anthony-rose-and-sons-swan-diner-trinity-bellwoods-queen-west/" />
+<meta property="og:site_name" content="Toronto Life" />
+<meta property="article:publisher" content="https://www.facebook.com/torontolife" />
+<meta property="article:tag" content="Anthony Rose" />
+<meta property="article:tag" content="Bar Begonia" />
+<meta property="article:tag" content="Big Crow" />
+<meta property="article:tag" content="Fat Pasha" />
+<meta property="article:tag" content="Rose and Sons" />
+<meta property="article:tag" content="Schmaltz Appetizing" />
+<meta property="article:tag" content="Swan by Rose and Sons" />
+<meta property="article:tag" content="The Critic" />
+<meta property="article:tag" content="Trinity Bellwoods" />
+<meta property="article:section" content="Restaurants" />
+<meta property="article:published_time" content="2015-10-22T13:00:07+00:00" />
+<meta property="article:modified_time" content="2015-10-23T10:55:44+00:00" />
+<meta property="og:updated_time" content="2015-10-23T10:55:44+00:00" />
+<meta property="og:image" content="http://cdn.torontolife.com/wp-content/uploads/2015/10/anthony-rose-swan-restaurant-06-1200x628-1445612110.jpg" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:description" content="With five trendy spots (and another on the way), he&#039;s the Judd Apatow of our city&#039;s restaurant scene"/>
+<meta name="twitter:title" content="Chef Anthony Rose&#039;s restaurant empire | Toronto Life"/>
+<meta name="twitter:site" content="@torontolife"/>
+<meta name="twitter:domain" content="Toronto Life"/>
+<meta name="twitter:image" content="http://cdn.torontolife.com/wp-content/uploads/2015/10/anthony-rose-swan-restaurant-06.jpg"/>
+<meta name="twitter:creator" content="@torontolife"/>
+<!-- / Yoast SEO plugin. -->
+
+<link rel="alternate" type="application/rss+xml" title="Toronto Life &raquo; Feed" href="http://torontolife.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Toronto Life &raquo; Comments Feed" href="http://torontolife.com/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Toronto Life &raquo; How Anthony Rose became Toronto’s comfort-food king Comments Feed" href="http://torontolife.com/food/restaurants/chef-anthony-rose-and-sons-swan-diner-trinity-bellwoods-queen-west/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"http:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/torontolife.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=045d1fdba088018bed3e38fe4098dd93"}};
+			!function(a,b,c){function d(a){var c=b.createElement("canvas"),d=c.getContext&&c.getContext("2d");return d&&d.fillText?(d.textBaseline="top",d.font="600 32px Arial","flag"===a?(d.fillText(String.fromCharCode(55356,56812,55356,56807),0,0),c.toDataURL().length>3e3):(d.fillText(String.fromCharCode(55357,56835),0,0),0!==d.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='juicerstyle-css'  href='//assets.juicer.io/embed.css?ver=045d1fdba088018bed3e38fe4098dd93' type='text/css' media='all' />
+<link rel='stylesheet' id='sjmcal_css-css'  href='http://torontolife.com/wp-content/plugins/sjm-calendar/css/calendar.css?ver=045d1fdba088018bed3e38fe4098dd93' type='text/css' media='all' />
+<link rel='stylesheet' id='sjm-dfp-custom-style-css'  href='http://torontolife.com/wp-content/plugins/sjm-dfp-manager/css/sjm-dfp-custom.css?ver=045d1fdba088018bed3e38fe4098dd93' type='text/css' media='all' />
+<link rel='stylesheet' id='sjm_sliders_main_css-css'  href='http://torontolife.com/wp-content/plugins/sjm-sliders/css/sjm_sliders_main.css?ver=045d1fdba088018bed3e38fe4098dd93' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-polls-css'  href='http://torontolife.com/wp-content/plugins/wp-polls/polls-css.css?ver=045d1fdba088018bed3e38fe4098dd93' type='text/css' media='all' />
+<style id='wp-polls-inline-css' type='text/css'>
+.wp-polls .pollbar {
+	margin: 1px;
+	font-size: 6px;
+	line-height: 8px;
+	height: 8px;
+	background-image: url('http://torontolife.com/wp-content/plugins/wp-polls/images/default/pollbg.gif');
+	border: 1px solid #c8c8c8;
+}
+
+</style>
+<link rel='stylesheet' id='sjmgallery-theme-css'  href='http://torontolife.com/wp-content/plugins/sjm-gallery/css/style.css?ver=045d1fdba088018bed3e38fe4098dd93' type='text/css' media='all' />
+<link rel='stylesheet' id='sjmgallery-custom-css-css'  href='http://torontolife.com/wp-content/themes/sjm-underscores/sjm-gallery/theme.css?ver=045d1fdba088018bed3e38fe4098dd93' type='text/css' media='all' />
+<link rel='stylesheet' id='fontawesome-css'  href='//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css?ver=045d1fdba088018bed3e38fe4098dd93' type='text/css' media='all' />
+<link rel='stylesheet' id='sjm-underscores-style-css'  href='http://torontolife.com/wp-content/themes/sjm-underscores/style.css?ver=045d1fdba088018bed3e38fe4098dd93' type='text/css' media='all' />
+<!-- This site uses the Google Analytics by Yoast plugin v5.4.6 - Universal enabled - https://yoast.com/wordpress/plugins/google-analytics/ -->
+<script type="text/javascript">
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','__gaTracker');
+
+	__gaTracker('create', 'UA-300475-2', 'auto');
+	__gaTracker('set', 'forceSSL', true);
+	__gaTracker('set', 'anonymizeIp', true);
+	__gaTracker('require', 'linkid', 'linkid.js');
+	__gaTracker('send','pageview');
+
+</script>
+<!-- / Google Analytics by Yoast -->
+<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js?ver=045d1fdba088018bed3e38fe4098dd93'></script>
+<script type='text/javascript' src='//assets.juicer.io/embed-no-jquery.js?ver=045d1fdba088018bed3e38fe4098dd93'></script>
+<script type='text/javascript' src='http://torontolife.com/wp-content/plugins/sjm-dfp-manager/js/sjm_dfp_autopos.js?ver=045d1fdba088018bed3e38fe4098dd93'></script>
+<script type='text/javascript' src='http://torontolife.com/wp-content/plugins/sjm-sliders/js/sjm_sliders_main.js?ver=045d1fdba088018bed3e38fe4098dd93'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://torontolife.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://cdn.torontolife.com/wp-includes/wlwmanifest.xml" />
+
+<link rel='shortlink' href='http://torontolife.com/?p=337614' />
+
+<!-- sjm-dfp output -->
+<script type='text/javascript'>
+var googletag = googletag || {};
+googletag.cmd = googletag.cmd || [];
+(function() {
+var gads = document.createElement('script');
+gads.async = true;
+gads.type = 'text/javascript';
+var useSSL = 'https:' == document.location.protocol;
+gads.src = (useSSL ? 'https:' : 'http:') +
+'//www.googletagservices.com/tag/js/gpt.js';
+var node = document.getElementsByTagName('script')[0];
+node.parentNode.insertBefore(gads, node);
+})();
+</script>
+
+<script type='text/javascript'>
+var sjm_dfp_gallery_adslots = [{index:2, div:'sjm-dfp-sjm-gallery-leaderboard', freq:1, is_int:false},{index:3, div:'sjm-dfp-sjm-gallery-big-box', freq:1, is_int:false}];
+var sjm_dfp_adslots = [];
+var sjm_dfp_ref = (sjm_parse_url(document.referrer).hostname || '');
+
+googletag.cmd.push(function() {
+googletag.pubads().setTargeting('ref', sjm_dfp_ref);
+googletag.pubads().setTargeting('slug', 'chef-anthony-rose-and-sons-swan-diner-trinity-bellwoods-queen-west');
+googletag.pubads().setTargeting('tag', ['anthony-rose','bar-begonia','big-crow','fat-pasha','rose-and-sons','schmaltz-appetizing','swan-by-rose-and-sons','the-critic','trinity-bellwoods']);
+googletag.pubads().setTargeting('ishome', 'no');
+googletag.pubads().setTargeting('issingle', 'yes');
+googletag.pubads().setTargeting('section-TL', 'restaurants');
+
+sjm_dfp_adslots[0] = googletag.defineSlot('/9527589/TL_LeaderBoard', [[728, 90], [970, 90], [970, 250]], 'sjm-dfp-leaderboard')
+	.addService(googletag.pubads());
+sjm_dfp_adslots[1] = googletag.defineSlot('/9527589/TL_BB_Upper', [[300, 250], [300, 600], [300, 1050]], 'sjm-dfp-upper-big-box')
+	.addService(googletag.pubads());
+sjm_dfp_adslots[2] = googletag.defineSlot('/9527589/TL_LeaderBoard_Gallery', [[728, 90], [970, 90], [970, 250]], 'sjm-dfp-sjm-gallery-leaderboard')
+	.addService(googletag.pubads());
+sjm_dfp_adslots[3] = googletag.defineSlot('/9527589/TL_BB_Upper_Gallery', [[300, 250], [300, 600]], 'sjm-dfp-sjm-gallery-big-box')
+	.addService(googletag.pubads())
+	.defineSizeMapping([[[900, 900], [[300, 600],[300, 250]]], [[550,550], [[300, 250]]], [[0,0], []]]);
+sjm_dfp_adslots[4] = googletag.defineSlot('/9527589/TL_BB_Lower', [[300, 250], [300, 600]], 'sjm-dfp-lower-big-box')
+	.addService(googletag.pubads());
+sjm_dfp_adslots[5] = googletag.defineSlot('/9527589/TL_wallpaper_1600', [[1600, 900], [2000, 900]], 'sjm-dfp-wallpaper')
+	.addService(googletag.pubads());
+sjm_dfp_adslots[6] = googletag.defineSlot('/9527589/TL-interstitial', [[1,1], [320,480], [480,320]], 'sjm-dfp-interstitial')
+	.addService(googletag.pubads());
+sjm_dfp_adslots[7] = googletag.defineSlot('/9527589/TL_inblog', [[560, 90], [655, 180], [1, 1]], 'sjm-dfp-inblog')
+	.addService(googletag.pubads());
+sjm_dfp_adslots[8] = googletag.defineSlot('/9527589/TL_LeaderBoard', [[970, 90], [970, 250]], 'sjm-dfp-intext-lb')
+	.addService(googletag.pubads());
+sjm_dfp_adslots[9] = googletag.defineSlot('/9527589/TL_BB_Upper', [[300, 250], [300, 600]], 'sjm-dfp-intext-ubb')
+	.addService(googletag.pubads());
+sjm_dfp_adslots[10] = googletag.defineSlot('/9527589/TL_BB_Lower', [[300, 250], [300, 600]], 'sjm-dfp-intext-lbb')
+	.addService(googletag.pubads());
+sjm_dfp_adslots[11] = googletag.defineSlot('/9527589/TL_inblog', [[560, 90], [655, 180]], 'sjm-dfp-intext-inblog')
+	.addService(googletag.pubads());
+googletag.pubads().enableSingleRequest();
+
+googletag.pubads().disableInitialLoad();
+googletag.enableServices();
+
+
+});
+</script>
+<script>
+var sjm_va_post_id = '337614';
+var sjm_va_ajax = 'http://torontolife.com/wp-content/plugins/sjm-viral-alerts/endpoint.php';
+var sjm_va_track_viral;
+
+jQuery(document).ready(function($) {
+	sjm_va_track_viral = function() {
+		if(typeof sjm_va_post_id === 'undefined' || !sjm_va_post_id)
+			return;
+
+		console.log("SJM Viral Alerts - Sending " + sjm_va_post_id + " to viral content tracker");
+
+		$.post(sjm_va_ajax, {h:sjm_va_post_id});
+	}
+
+	if(!(/\/slide\//.test(location.href)))
+		sjm_va_track_viral();
+});
+</script>
+
+
+<meta name="thumbnail" content="http://cdn.torontolife.com/wp-content/uploads/2015/10/anthony-rose-swan-restaurant-06-283x159-1445629503.jpg" />
+
+<script type="text/javascript">
+(function(url){
+	if(/(?:Chrome\/26\.0\.1410\.63 Safari\/537\.31|WordfenceTestMonBot)/.test(navigator.userAgent)){ return; }
+	var addEvent = function(evt, handler) {
+		if (window.addEventListener) {
+			document.addEventListener(evt, handler, false);
+		} else if (window.attachEvent) {
+			document.attachEvent('on' + evt, handler);
+		}
+	};
+	var removeEvent = function(evt, handler) {
+		if (window.removeEventListener) {
+			document.removeEventListener(evt, handler, false);
+		} else if (window.detachEvent) {
+			document.detachEvent('on' + evt, handler);
+		}
+	};
+	var evts = 'contextmenu dblclick drag dragend dragenter dragleave dragover dragstart drop keydown keypress keyup mousedown mousemove mouseout mouseover mouseup mousewheel scroll'.split(' ');
+	var logHuman = function() {
+		var wfscr = document.createElement('script');
+		wfscr.type = 'text/javascript';
+		wfscr.async = true;
+		wfscr.src = url + '&r=' + Math.random();
+		(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(wfscr);
+		for (var i = 0; i < evts.length; i++) {
+			removeEvent(evts[i], logHuman);
+		}
+	};
+	for (var i = 0; i < evts.length; i++) {
+		addEvent(evts[i], logHuman);
+	}
+})('//torontolife.com/?wordfence_logHuman=1&hid=88ABD208478EA4C30C4303A8ECD52E61');
+</script>
+<style type="text/css">
+</style>
+
+<script src="https://use.typekit.net/efa6vqj.js"></script>
+<script>try{Typekit.load(
+{ async: true }
+);}catch(e){}</script>
+
+</head>
+
+<body class="single single-post postid-337614 single-format-standard group-blog" itemscope="itemscope" itemtype="http://schema.org/WebPage">
+
+
+<div class="header-wrapper">
+
+<header class="header nav-down" itemscope="itemscope" itemtype="http://schema.org/WPHeader" role="banner">
+ <div class="upper-header-wrapper">
+
+
+
+    <div class="main-brand">
+      <a href ="/">
+      <svg version="1.1" id="Layer_1" class="main-logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 389.9 146.7" style="enable-background:new 0 0 389.9 146.7;" xml:space="preserve">
+
+    <path id="XMLID_2_" class="wordmark" d="M58.3,76.5h12v70.2h-12V76.5z M265.5,51.5l-17.8-51h-16.2v70.2h11.5V19.1l18.1,51.6H277V0.5
+    	h-11.5V51.5z M191.6,59.7c12.9,0,23.4-10.8,23.4-24.1c0-13.3-10.5-24.1-23.4-24.1c-12.9,0-23.4,10.8-23.4,24.1
+    	C168.2,48.9,178.7,59.7,191.6,59.7 M191.6,0c19.6,0,35.6,16,35.6,35.6s-16,35.6-35.6,35.6c-19.6,0-35.6-16-35.6-35.6S172,0,191.6,0
+    	 M14.6,70.7h12v-59h14.6V0.5H0v11.2h14.6V70.7z M71.1,59.7c12.9,0,23.4-10.8,23.4-24.1c0-13.3-10.5-24.1-23.4-24.1
+    	c-12.9,0-23.4,10.8-23.4,24.1C47.7,48.9,58.2,59.7,71.1,59.7 M106.7,35.6c0,19.6-16,35.6-35.6,35.6c-19.6,0-35.6-16-35.6-35.6
+    	C35.5,16,51.5,0,71.1,0C90.7,0,106.7,16,106.7,35.6 M324.5,0.5h-41.3v11.2h14.6v59h12v-59h14.6V0.5z M354.3,59.7
+    	c12.9,0,23.4-10.8,23.4-24.1c0-13.3-10.5-24.1-23.4-24.1c-12.9,0-23.4,10.8-23.4,24.1C330.9,48.9,341.4,59.7,354.3,59.7 M354.3,0
+    	c19.6,0,35.6,16,35.6,35.6s-16,35.6-35.6,35.6c-19.6,0-35.6-16-35.6-35.6S334.7,0,354.3,0 M77.8,146.7h12v-30.5h25.9V105H89.8V87.7
+    	h26.7V76.5H77.8V146.7z M132.3,30.2c6,0,9.5-4.3,9.5-9.4c0-5.1-3.4-9-9.5-9H123v18.4H132.3z M133.3,41.4H123v29.3h-12V0.5h22
+    	c11.2,0,20.9,8.1,20.9,20.3c0,7.3-3.7,13.9-9.8,17.2l18.2,32.7h-13.8L133.3,41.4z M26.7,76.5h-12v70.2h37.8v-11.2H26.7V76.5z
+    	 M123,146.7h42.3v-11.2h-30.3v-19.2h28.2V105h-28.2V87.7h30.3V76.5H123V146.7z"/>
+    </svg>
+      </a>
+    </div>
+
+
+
+
+
+
+
+
+<div class="search-social">
+
+  <div class='search-form-container'>
+    <form action="/searchgc/" id="searchform" method="get">
+    <div class="search">
+      <input type="search" id="s" name="q" placeholder="Search Toronto Life" class="" required="required">
+      <button class="search-button" id="searchsubmit" alt="Search">
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20px" height="40px" viewBox="0 0 20 20" style="enable-background:new 0 0 20 20;" xml:space="preserve">
+    <path class="search-icon" d="M17.513,20l-5.212-5.241c-1.255,0.826-2.7,1.302-4.319,1.302C3.569,16.061,0,12.464,0,8.027
+    C0,3.597,3.569,0,7.983,0c4.406,0,7.982,3.597,7.982,8.027c0,1.549-0.434,2.993-1.184,4.216L20,17.499L17.513,20z M13.312,8.027
+    c0-2.962-2.385-5.359-5.33-5.359c-2.945,0-5.337,2.398-5.337,5.359s2.392,5.367,5.337,5.367
+    C10.927,13.393,13.312,10.989,13.312,8.027z"/>
+      </svg>
+    </button>
+
+    </div>
+  </form>
+</div>
+
+  <div class="social">
+
+
+
+    <div class="social-item social-item__text"><span class="social-item__text--accent">264,502 Torontonians can’t be wrong.</span> Follow us:</div>
+
+    <div class="social-item social-item__icon">
+<a href="http://www.facebook.com/torontolife/"  id="fb" title="Facebook">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20px" height="20px" viewBox="0 0 20 20" style="enable-background:new 0 0 20 20;" xml:space="preserve">
+    <path class="icon-facebook" d="M11.539,20H7.402V10H5.334V6.553h2.068V4.484C7.402,1.673,8.569,0,11.885,0h2.761v3.447h-1.725
+  	c-1.291,0-1.377,0.482-1.377,1.381l-0.005,1.725h3.127L14.3,10h-2.761V20z"/>
+    </svg></a>
+</div>
+
+
+
+
+  <div class="social-item social-item__icon"><a href="http://www.twitter.com/torontolife/" id="twitter" title="Twitter">
+  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20px" height="20px" viewBox="0 0 20 20" style="enable-background:new 0 0 20 20;" xml:space="preserve">
+      <path class="icon-twitter" d="M20,3.797c-0.736,0.326-1.527,0.547-2.357,0.646c0.847-0.508,1.498-1.312,1.804-2.27
+      c-0.793,0.471-1.671,0.812-2.606,0.996c-0.748-0.798-1.815-1.296-2.995-1.296c-2.266,0-4.103,1.837-4.103,4.103
+      c0,0.322,0.036,0.635,0.106,0.935C6.439,6.74,3.416,5.107,1.392,2.624C1.039,3.23,0.837,3.935,0.837,4.687
+      c0,1.423,0.724,2.679,1.825,3.415C1.99,8.081,1.357,7.896,0.804,7.589C0.803,7.606,0.803,7.623,0.803,7.641
+      c0,1.988,1.414,3.646,3.291,4.023c-0.344,0.094-0.707,0.144-1.081,0.144c-0.265,0-0.522-0.026-0.772-0.074
+      c0.522,1.63,2.037,2.817,3.833,2.85c-1.404,1.101-3.173,1.757-5.096,1.757c-0.331,0-0.658-0.019-0.979-0.057
+      c1.816,1.164,3.973,1.844,6.29,1.844c7.547,0,11.674-6.252,11.674-11.675c0-0.178-0.004-0.355-0.012-0.531
+      C18.754,5.343,19.45,4.62,20,3.797z"/>
+    </svg> </a>
+         </div>
+
+
+
+ <div class="social-item social-item__icon"><a href="https://instagram.com/torontolifemag/" id="instagram" title="Instagram">
+
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="Layer_1" x="0" y="0" width="20px" height="20px"  viewBox="0 0 32 32" xml:space="preserve"><path class="instagram-icon" d="M28 0H4C1.8 0 0 1.8 0 4v24c0 2.2 1.8 4 4 4h24c2.2 0 4-1.8 4-4V4C32 1.8 30.2 0 28 0zM16 12c3.7 0 4 4 4 4s0.1 4-4 4c-4.1 0-4-4-4-4S12.3 12 16 12zM28 26c0 1.1-0.9 2-2 2H6c-1.1 0-2-0.9-2-2V16c0-1.1 0.9-2 2-2h2.3C8.1 14.6 8 15.3 8 16c0 4.4 3.6 8 8 8s8-3.6 8-8c0-0.7-0.1-1.4-0.3-2H26c1.1 0 2 0.9 2 2V26zM28 8c0 1.1-0.9 2-2 2h-2c-1.1 0-2-0.9-2-2V6c0-1.1 0.9-2 2-2h2c1.1 0 2 0.9 2 2V8z"/></svg>
+
+    </a>
+ </div>
+
+  </div>
+</div>
+
+</div><!--end upper header wrapper-->
+
+	<nav class="primary-navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+
+  <div class="brand-placeholder">
+     <a href ="/">
+    <div class="main-brand">
+      <svg version="1.1" id="Layer_1" class="main-logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 389.9 146.7" style="enable-background:new 0 0 389.9 146.7;" xml:space="preserve">
+
+    <path id="XMLID_2_" class="wordmark" d="M58.3,76.5h12v70.2h-12V76.5z M265.5,51.5l-17.8-51h-16.2v70.2h11.5V19.1l18.1,51.6H277V0.5
+      h-11.5V51.5z M191.6,59.7c12.9,0,23.4-10.8,23.4-24.1c0-13.3-10.5-24.1-23.4-24.1c-12.9,0-23.4,10.8-23.4,24.1
+      C168.2,48.9,178.7,59.7,191.6,59.7 M191.6,0c19.6,0,35.6,16,35.6,35.6s-16,35.6-35.6,35.6c-19.6,0-35.6-16-35.6-35.6S172,0,191.6,0
+       M14.6,70.7h12v-59h14.6V0.5H0v11.2h14.6V70.7z M71.1,59.7c12.9,0,23.4-10.8,23.4-24.1c0-13.3-10.5-24.1-23.4-24.1
+      c-12.9,0-23.4,10.8-23.4,24.1C47.7,48.9,58.2,59.7,71.1,59.7 M106.7,35.6c0,19.6-16,35.6-35.6,35.6c-19.6,0-35.6-16-35.6-35.6
+      C35.5,16,51.5,0,71.1,0C90.7,0,106.7,16,106.7,35.6 M324.5,0.5h-41.3v11.2h14.6v59h12v-59h14.6V0.5z M354.3,59.7
+      c12.9,0,23.4-10.8,23.4-24.1c0-13.3-10.5-24.1-23.4-24.1c-12.9,0-23.4,10.8-23.4,24.1C330.9,48.9,341.4,59.7,354.3,59.7 M354.3,0
+      c19.6,0,35.6,16,35.6,35.6s-16,35.6-35.6,35.6c-19.6,0-35.6-16-35.6-35.6S334.7,0,354.3,0 M77.8,146.7h12v-30.5h25.9V105H89.8V87.7
+      h26.7V76.5H77.8V146.7z M132.3,30.2c6,0,9.5-4.3,9.5-9.4c0-5.1-3.4-9-9.5-9H123v18.4H132.3z M133.3,41.4H123v29.3h-12V0.5h22
+      c11.2,0,20.9,8.1,20.9,20.3c0,7.3-3.7,13.9-9.8,17.2l18.2,32.7h-13.8L133.3,41.4z M26.7,76.5h-12v70.2h37.8v-11.2H26.7V76.5z
+       M123,146.7h42.3v-11.2h-30.3v-19.2h28.2V105h-28.2V87.7h30.3V76.5H123V146.7z"/>
+    </svg>
+    </div>
+  </a>
+  </div>
+
+
+  <ul class="primary-navigation__list">
+     <li id="menu-item-327558" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor menu-item-327558 primary-navigation__item"><a href="http://torontolife.com/category/food/">Food</a></li>
+<li id="menu-item-328914" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-328914 primary-navigation__item"><a href="http://torontolife.com/category/real-estate/">Real Estate</a></li>
+<li id="menu-item-328916" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-328916 primary-navigation__item"><a href="http://torontolife.com/category/shopping/">Shopping</a></li>
+<li id="menu-item-327559" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-327559 primary-navigation__item"><a href="http://torontolife.com/category/city/">City</a></li>
+<li id="menu-item-328915" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-328915 primary-navigation__item"><a href="http://torontolife.com/category/culture/">Culture</a></li>
+<li id="menu-item-329736" class="hide-on-tablet menu-item menu-item-type-post_type menu-item-object-page menu-item-329736 primary-navigation__item"><a href="http://torontolife.com/neighbourhoods/">Neighbourhoods</a></li>
+<li id="menu-item-346676" class="hide-on-tablet menu-item menu-item-type-custom menu-item-object-custom menu-item-346676 primary-navigation__item"><a href="http://torontolife.com/great-nights-out/great-nights-out-november/?utm_source=navbar&#038;utm_medium=banner&#038;utm_term=great-nights-out&#038;utm_campaign=great-nights-out">Great Nights Out</a></li>
+<li id="menu-item-331153" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-331153 primary-navigation__item"><a href="https://secure.torontolife.com/login.php">Subscriptions</a></li>
+  </ul>
+
+  <div class="social-placeholder">
+
+
+      <div class="search-compact-placeholder">
+
+               <form action="/searchgc/" id="searchform" method="get">
+          <div class="search">
+            <input type="search" id="s" name="q" placeholder="Search Toronto Life" class="compact-search-input" required="required">
+            <button class="search-button" id="searchsubmit" alt="Search">
+              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20px" height="54px" viewBox="0 0 20 20" style="enable-background:new 0 0 20 20;" xml:space="preserve">
+          <path class="search-icon" d="M17.513,20l-5.212-5.241c-1.255,0.826-2.7,1.302-4.319,1.302C3.569,16.061,0,12.464,0,8.027
+          C0,3.597,3.569,0,7.983,0c4.406,0,7.982,3.597,7.982,8.027c0,1.549-0.434,2.993-1.184,4.216L20,17.499L17.513,20z M13.312,8.027
+          c0-2.962-2.385-5.359-5.33-5.359c-2.945,0-5.337,2.398-5.337,5.359s2.392,5.367,5.337,5.367
+          C10.927,13.393,13.312,10.989,13.312,8.027z"/>
+            </svg>
+          </button>
+
+          </div>
+        </form>
+
+
+     </div>
+
+      <div class="social-trigger" id="social-trigger">
+        <a href="javascript:void(0);" class="social-follow-anchor">
+      <span class="social-trigger__text">Follow us</span>
+      <span class="social-trigger__icon"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="10px" height="5px" viewBox="0 0 10 5" style="enable-background:new 0 0 10 5;" xml:space="preserve">
+      <polygon class="social-pointer" points="10,0 5,5 0,0 "/>
+    </svg></span></a>
+    </div>
+
+
+  </div>
+
+
+
+</nav>
+
+
+<div class="navigation-trigger" id="navigation-trigger">
+  <span class="navigation-trigger__text">Sections</span>
+  <span class="navigation-trigger__icon"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="10px" height="5px" viewBox="0 0 10 5" style="enable-background:new 0 0 10 5;" xml:space="preserve">
+  <polygon class="navigation-pointer" points="10,0 5,5 0,0 "/>
+</svg></span>
+</div>
+
+</header>
+
+
+</div><!--end header-wrapper-->
+
+
+
+  <div class="container main">
+
+
+
+      <section class="ad-frame ad-leaderboard">
+
+        <div class="ad-frame--leaderboard leaderboard">
+
+        </div>
+
+      </section>
+
+
+<div class="post-top-border"></div>
+
+
+
+<article id="post-337614" class="single-article">
+
+		<div class='single-topic-wrapper'><a class='archive-topic-link' href='http://torontolife.com/category/food/restaurants/'>Restaurants</a></div>
+
+		<div class="upper-title-tag">
+		<h1 itemprop="headline" class="sponsored-hed" >How Anthony Rose became Toronto’s comfort-food king</h1>		</div>
+
+
+		<div class="post-social-placeholder">
+				<section class="social-media-buttons">
+
+
+		<a href="http://twitter.com/home/?status=How+Anthony+Rose+became+Toronto%E2%80%99s+comfort-food+king - http://torontolife.com/food/restaurants/chef-anthony-rose-and-sons-swan-diner-trinity-bellwoods-queen-west/" class="post-social twitter" title="Tweet How Anthony Rose became Toronto’s comfort-food king" rel="nofollow">
+						 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20px" height="20px" viewBox="0 0 20 20" style="enable-background:new 0 0 20 20;" xml:space="preserve">
+		      <path class="icon-twitter" d="M20,3.797c-0.736,0.326-1.527,0.547-2.357,0.646c0.847-0.508,1.498-1.312,1.804-2.27
+		      c-0.793,0.471-1.671,0.812-2.606,0.996c-0.748-0.798-1.815-1.296-2.995-1.296c-2.266,0-4.103,1.837-4.103,4.103
+		      c0,0.322,0.036,0.635,0.106,0.935C6.439,6.74,3.416,5.107,1.392,2.624C1.039,3.23,0.837,3.935,0.837,4.687
+		      c0,1.423,0.724,2.679,1.825,3.415C1.99,8.081,1.357,7.896,0.804,7.589C0.803,7.606,0.803,7.623,0.803,7.641
+		      c0,1.988,1.414,3.646,3.291,4.023c-0.344,0.094-0.707,0.144-1.081,0.144c-0.265,0-0.522-0.026-0.772-0.074
+		      c0.522,1.63,2.037,2.817,3.833,2.85c-1.404,1.101-3.173,1.757-5.096,1.757c-0.331,0-0.658-0.019-0.979-0.057
+		      c1.816,1.164,3.973,1.844,6.29,1.844c7.547,0,11.674-6.252,11.674-11.675c0-0.178-0.004-0.355-0.012-0.531
+		      C18.754,5.343,19.45,4.62,20,3.797z"/>
+		    </svg>
+
+		</a>
+
+		<a href="http://www.facebook.com/sharer.php?u=http://torontolife.com/food/restaurants/chef-anthony-rose-and-sons-swan-diner-trinity-bellwoods-queen-west/" class="post-social facebook" title="Share How Anthony Rose became Toronto’s comfort-food king on Facebook" rel="nofollow">
+
+		    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20px" height="20px" viewBox="0 0 20 20" style="enable-background:new 0 0 20 20;" xml:space="preserve">
+		    <path class="icon-facebook" d="M11.539,20H7.402V10H5.334V6.553h2.068V4.484C7.402,1.673,8.569,0,11.885,0h2.761v3.447h-1.725
+		  	c-1.291,0-1.377,0.482-1.377,1.381l-0.005,1.725h3.127L14.3,10h-2.761V20z"/>
+		    </svg>
+
+		</a>
+
+
+		<!--
+		<a href="http://pinterest.com/pin/create/button/?url=http://torontolife.com/food/restaurants/chef-anthony-rose-and-sons-swan-diner-trinity-bellwoods-queen-west/&media=http://torontolife.com/wp-content/uploads/2015/10/anthony-rose-swan-restaurant-06-2000x2997.jpg" class="post_social pinterest" title="Pin How Anthony Rose became Toronto’s comfort-food king" rel="nofollow">
+			<span class="icon"></span>
+		</a>
+		<a href="#comment-anchor" class="comment" title="Jump to Comments">
+			<img src="http://torontolife.com/wp-content/plugins/sjm-toist-sharing/images/comment.png"/>
+		</a>
+		-->
+
+
+
+
+	</section>
+
+
+		</div>
+
+		<div class="lower-title-tag">
+		<h1 itemprop="headline" class="sponsored-hed" >How Anthony Rose became Toronto’s comfort-food king</h1>		</div>
+
+
+
+		<p class="standfirst">Anthony Rose's restaurant empire has expanded to include Swan by Rose and Sons, his new Queen West diner
+</p>
+		<p class="byline byline-long">By <a href="http://torontolife.com/author/mpupo/" title="Posts by Mark Pupo" class="url fn" rel="author">Mark Pupo</a> | </p><p class="content__dateline byline-long">&nbsp;<time itemprop="datePublished" class="content__dateline" datetime="2015-10-22T13:00:07+00:00">October 22, 2015<span class="content__dateline-time"> AT 1:00 pm</span></time></p><p class="byline byline-short"> <a href="http://torontolife.com/author/mpupo/" title="Posts by Mark Pupo" class="url fn" rel="author">Mark Pupo</a> | </p><p class="content__dateline byline-short">&nbsp;<time itemprop="datePublished" class="content__dateline" datetime="2015-10-22T13:00:07+00:00">10/22/2015<span class="content__dateline-time"></span></time></p>
+
+
+
+	<div class="standard-article-body" data-test-id="article-review-body" itemprop="text">
+
+
+		<figure id="attachment_338225" style="width: 2000px;" class="wp-caption alignnone"><img class="size-large wp-image-338225" src="http://cdn.torontolife.com/wp-content/uploads/2015/10/anthony-rose-swan-restaurant-01-2000x1200.jpg" alt="Anthony Rose in the doorway of Swan by Rose and Sons (Image: Dave Gillespie)" width="2000" height="1200" /><figcaption class="wp-caption-text">Anthony Rose in the doorway of Swan by Rose and Sons (Image: Dave Gillespie)</figcaption></figure>
+<p><strong>Swan by Rose and Sons</strong> <span class="rating">★★½</span><br />
+<em>892 Queen St. W.,</em> 647-348-7926<br />
+<em><a href="http://www.torontolife.com/toronto-life-restaurant-reviews-explained/" class="article-link"><span data-title="How our star system works »">How our star system works »</span></a></em></p>
+<p><strong>Last spring,</strong> Anthony Rose was on vacation in Mexico, practising yoga on a beach, when he read online that Swan restaurant, a handsome vintage diner run as a low-key bistro on Queen West since the mid-’90s, had closed and the space was up for sale. The owners were tired of operating at a loss. When I read the news, I figured it was only a matter of time before the wood-framed booths with built-in coat stands and the Arborite lunch counter would be gutted to make way for another bourbon cocktail bar. Thankfully, Rose, who specializes in new-wave diners, cut his trip short and pounced.</p>
+<p>Rose has become the Judd Apatow of ­Toronto’s restaurant scene, always with multiple projects on the go, his empire built on a fine-tuned sense of what we want to consume at this very moment. He’s the favourite chef of millennials in Chuck Taylors who are too trendy to show that they care about trends. What they find so appealing is his shaggy likability; he’s often prowling around his restaurants, wearing to-the-navel V-necks and ­Buddhist prayer beads wrapped around his wrists, delivering dirty jokes and pitchers of industrial-strength cocktails to the regulars. He’s the anti-Susur and the anti–Mark McEwan. You’ll never hear him talking about anything as pretentious as a “vision” for his restaurants.</p>
+<figure id="attachment_338227" style="width: 1318px;" class="wp-caption aligncenter"><img class="wp-image-338227 size-full" src="http://cdn.torontolife.com/wp-content/uploads/2015/10/anthony-rose-swan-restaurant-03.jpg" alt="(Image: Dave Gillespie)" width="1318" height="880" /><figcaption class="wp-caption-text">Rose and Sons (plus its backyard party patio, Big Crow) (Image: Dave Gillespie)</figcaption></figure>
+<p>Like a number of trendy Toronto chefs of his generation, Rose got his start at the Drake Hotel, where he earned attention for pulled pork and artery-busting burgers. In 2012, he left his exec chef post and opened Rose and Sons, an artisanally inclined diner that replaced the 1960s lunch counter People’s Foods on Dupont. It became instantly, ridiculously popular, with lineups snaking out the door for one of the coveted 28 seats at the pew-like communal booths. Rose and Sons gave comfort food a hedonistic edge—everything seemed to be breaded, fried, coated in cheddar from a boutique farm and garnished with Dr. Pepper–flavoured bacon. The restaurant marked the beginning of his colonization of Dupont, previously a food wasteland.</p>
+<p>Next came Big Crow, a year-round restaurant with an ad-hoc, pop-up feel: Rose serves smoked ribs and Frito pie in parquet bowls straight out of the ’70s on a sheltered heated patio full of picnic tables. The kitchen, which includes a wood-fired grill for their smoky whole rainbow trout and brined quarter chickens, is built into a shipping container.</p>
+<figure id="attachment_338228" style="width: 1039px;" class="wp-caption aligncenter"><img class="wp-image-338228 size-full" src="http://cdn.torontolife.com/wp-content/uploads/2015/10/anthony-rose-swan-restaurant-04.jpg" alt="(Image: Dave Gillespie)" width="1039" height="775" /><figcaption class="wp-caption-text">Fat Pasha (Image: Dave Gillespie)</figcaption></figure>
+<p>Then, tapping into the Middle Eastern craze of 2014, he unveiled Fat Pasha, where the draw is spectacular hummus, kebabs and saffron couscous. The star dish that everyone photographs is a whole roasted cauliflower, hidden under a coating of tahini and pomegranate seeds. It’s ­delicious, but a distraction from even better plates of house-made pickles and just-greasy-enough latkes. Because he had also leased some extra space around the corner, Rose opened Schmaltz ­Appetizing, a deli where I have a standing order for a Chub Chub (a plush New York–style Kiva’s bagel loaded with horseradish cream cheese, dill pickles, gravlax and smoked whitefish) and a chilled can of Cott’s black cherry soda. As at all of Rose’s places, there’s a baller-bait option—a $45 bagel loaded with slices of boiled egg and 50 grams of sturgeon caviar. This month, he’s promising to open another Dupont spot just east of Spadina, Bar Begonia. He told me it’ll be his version of a Parisian cocktail lounge by way of Brooklyn, which I took to mean he’ll hire bearded bar­tenders with a thing for Pernod.</p>
+<figure id="attachment_338226" style="width: 1229px;" class="wp-caption aligncenter"><img class="wp-image-338226 size-full" src="http://cdn.torontolife.com/wp-content/uploads/2015/10/anthony-rose-swan-restaurant-02.jpg" alt="(Image: Dave Gillespie)" width="1229" height="971" /><figcaption class="wp-caption-text">Schmaltz Appetizing (Image: Dave Gillespie)</figcaption></figure>
+<p>Swan by Rose and Sons opened over the summer after a renovation that was as much a restoration. Rose had the booths reupholstered, the Arborite tabletops scrubbed and the original scalloped-edged bar shelving stacked with an array of hipster-approved tequilas and mezcals. An old diner menu over the bar—winking at Swan’s past—lists mozzarella sticks, chicken fingers and other items you can’t actually order. Swan by Rose and Sons is open from breakfast until last call, seven days a week, but that’s where the resemblance to a diner ends. The real menu, affixed to clipboards and evolving every week, is what people call Californian, referring to the philosophy of cooking that verges on non-cooking, in which the chef interferes as little as possible with what’s fresh from the farm. To spell out the theme, Rose placed cacti in the window, positioned a surfboard in a corner and hung the rusted hood of a ’78 Pontiac Firebird on one wall. The servers (one in an on-the-nose ensemble of headband, flip-flops and a tank) double as DJs, and play Aretha Franklin and Diana Ross on a turntable at the kitchen pass.</p>
+<p>Cali cuisine is a little bit French and a little bit Italian, with a flavour grab from Mexico. Above all, it’s about being healthy without tasting like it. In Swan’s first few months, coinciding with the summer harvest, this meant nasturtium petals adorning crispy rösti and poached free-range eggs at breakfast, slices of deliciously chewy Thuet sourdough and a lot of salads. My favourite was comprised of musky watermelon, oozing mozzarella, mint leaves and house-cured bacon drizzled with hot sauce. One night, my entrée was a single, exceptional Niagara beefsteak tomato, its innards a juicy fretwork, roasted whole with garlic and presented like a prime cut on a bed of polenta mixed for extra creaminess with mascarpone.</p>
+<p>Rose, once again, is on-trend. The entire city seems to be on a binge of ostentatiously healthy eating. Everyone is discovering intolerances—real or occasionally imagined if firmly held—to dairy, lupins, eggs, crustaceans, molluscs, nuts of all kinds and, of course, gluten. Menus highlight gluten-free dishes the same way they used to point out low-calorie options. (Does anyone count calories anymore?) I have one acquaintance who decided he’s okay with dairy but not blue cheese—­inconvenient when gorgonzola is making a comeback in pasta dishes. You can’t walk a block without being offered a sample by a new juice bar. Maybe our pendulum swing away from the excesses of 20-course tasting menus and foie gras poutine is a reaction to an election year. Even a few steak houses now list kale salad on their menus, which is like the Marquis de Sade inviting ­Mormons to a sleepover.</p>
+<figure id="attachment_338229" style="width: 1045px;" class="wp-caption aligncenter"><img class="wp-image-338229 size-full" src="http://cdn.torontolife.com/wp-content/uploads/2015/10/anthony-rose-swan-restaurant-05.jpg" alt="(Image: Dave Gillespie)" width="1045" height="725" /><figcaption class="wp-caption-text">Butternut squash fajitas at Swan by Rose and Sons (Image: Dave Gillespie)</figcaption></figure>
+<p>Notwithstanding his predilection for gluttonous dining, Rose is deeply rooted in Cali cuisine. In the ’90s, he trained at the Californian Culinary Academy and worked in seasonal-centric San Francisco kitchens before eventually making his way back to Toronto. The mascarpone polenta on the Swan menu is a staple at the legendary Zuni in San Fran. And the terrific, flaky cod en papillote with fingerling potatoes and slivers of preserved lemon I had one night is something you might find on the menu at Chez Panisse in Berkeley. The purée of cranberry beans and garlic, meant to slather on that sourdough but good enough to eat with a spoon on its own, reminded me of the simple yet fantastically flavourful spreads I’ve had at Bar Tartine, yet another great San Francisco restaurant.</p>
+<p>Some of the best dishes at the new Swan appear to have been thrown together on a whim, like a simple bowl of steamed snap peas, served cold to show off their crunch, dressed in a gingery vinaigrette with black sesame seeds and flakes of Maldon salt, or a salad of baby butter lettuce and pink grapefruit with a butter­milk dressing. But there’s labour-intensive duck confit, too, its skin a crackling mahogany, on a bed of cress. And, this being a Rose restaurant, there’s an excellent organic chuck burger on the menu all day long, stacked high with monterey jack, bacon and roasted peppers.</p>
+<figure id="attachment_338230" style="width: 2000px;" class="wp-caption aligncenter"><img class="wp-image-338230 size-full" src="http://cdn.torontolife.com/wp-content/uploads/2015/10/anthony-rose-swan-restaurant-06.jpg" alt="(Image: Dave Gillespie)" width="2000" height="2997" /><figcaption class="wp-caption-text">Rose, outside of the revitalized Swan on Queen West (Image: Dave Gillespie)</figcaption></figure>
+<p>The only letdowns on all of my visits were the cocktails, which are made with long lists of fancy tinctures and syrups but taste like overpriced Fruitopia, and the desserts, never a strong suit at Rose’s restaurants—proof that a no-fuss, thrown-together MO doesn’t always win. One night it was a plate of roasted stone fruit (the peaches and nectarines were mealy, the black cherries past their prime) with a blob of crème fraîche and bitter sections of walnut. Another night, I shared a forgettable bowl of pound cake soaked in a berry coulis. But that sensational mascarpone polenta, which luckily is available by the bowl as a side, went a long way to help me forgive a ho-hum dessert.</p>
+<p>Simple, seasonal dishes are easy to execute during the harvest months. I don’t envy Rose’s challenge come winter, when vivid flavours will be tough to pull off (it’s plain why fresh-is-more restaurants took off in California first). He told me, and it’s no huge revelation, that the menu will shift focus to root veg, smoked fish and burgers. In other words, it’ll become more like his original diner up on Dupont. And the health nuts will have to settle for the juice bar down the block.</p>
+
+	</div><!-- .entry-content -->
+
+
+	<div class="article-footer">
+		<p class="post-topics">
+			<span class='topic-title'>Topics:</span>
+		<a class='topic-link' href='http://torontolife.com/tag/anthony-rose/'> Anthony Rose</a><a class='topic-link' href='http://torontolife.com/tag/bar-begonia/'> Bar Begonia </a><a class='topic-link' href='http://torontolife.com/tag/big-crow/'> Big Crow </a><a class='topic-link' href='http://torontolife.com/tag/fat-pasha/'> Fat Pasha </a><a class='topic-link' href='http://torontolife.com/tag/rose-and-sons/'> Rose and Sons </a><a class='topic-link' href='http://torontolife.com/tag/schmaltz-appetizing/'> Schmaltz Appetizing </a><a class='topic-link' href='http://torontolife.com/tag/swan-by-rose-and-sons/'> Swan by Rose and Sons </a><a class='topic-link' href='http://torontolife.com/tag/the-critic/'> The Critic </a><a class='topic-link' href='http://torontolife.com/tag/trinity-bellwoods/'> Trinity Bellwoods </a>	</p>
+
+	<div id='comment-anchor'></div>
+<div id="disqus_thread">
+    </div>
+
+
+	</div>
+
+</article><!-- #post-## -->
+
+
+
+
+
+
+
+
+<aside>
+
+<section class="ad-frame">
+  <div class="ad-frame--bigbox upper-big-box">
+
+  </div>
+</section> <!-- END FIRST BIG BOX -->
+
+
+    <div id="text-4" class="widget widget_text">			<div class="textwidget"></div>
+		</div> <!--
+<section class="newsletter-signup">
+    <h3 class="newsletter-signup__title">Get highlights of the most important happenings</h3>
+
+
+  <a href="/newsletters/" class="newsletter-signup__management-link">View all newsletters</a>
+</section><!-- END NEWSLETTER -->
+
+  <div id="text-54" class="widget widget_text">			<div class="textwidget"><section class="feed feed-aside">
+
+<h2 class="feed__header">THE CRITIC</h2>
+
+<article class="feed-card feed-card-aside">
+<div class="feed-card-aside__image">
+<a href="http://torontolife.com/food/restaurants/new-toronto-restaurants-alo-patrick-kriss-tasting-menu-queen-spadina/"><img src="http://cdn.torontolife.com/wp-content/uploads/2015/09/toronto-restaurant-alo-05-386x217.jpg" class="feed__image wp-post-image" alt="" /></a>
+</div>
+<div class="feed-card-aside__info">
+<a  href="http://torontolife.com/category/food/restaurants/" class="card__label" data-label="Slot 1">Restaurants</a>
+
+<h2 class="feed-card-aside__headline"><a href="http://torontolife.com/food/restaurants/new-toronto-restaurants-alo-patrick-kriss-tasting-menu-queen-spadina/" data-label="Slot 1">Course correction: At his audacious new restaurant, Alo, Patrick Kriss revives the sullied art of the tasting menu</a></h2>
+
+<h1 itemprop="headline" class="sponsored-hed" >Course correction: At his audacious new restaurant, Alo, Patrick Kriss revives the sullied art of the tasting menu</h1>
+</div>
+</article>
+
+
+
+<article class="feed-card feed-card-aside">
+<div class="feed-card-aside__image">
+<a href="http://torontolife.com/food/restaurants/toronto-restaurants-kasa-moto-yorkville-izakaya-the-chase-hospitality-group/"><img src="http://cdn.torontolife.com/wp-content/uploads/2015/08/toronto-restaurants-kasa-moto-386x217.jpg" class="feed__image wp-post-image" alt="" /></a>
+</div>
+<div class="feed-card-aside__info">
+<a  href="http://torontolife.com/category/food/restaurants/" class="card__label" data-label="Slot 2">Restaurants</a>
+
+<h2 class="feed-card-aside__headline"><a href="http://torontolife.com/food/restaurants/toronto-restaurants-kasa-moto-yorkville-izakaya-the-chase-hospitality-group/" data-label="Slot 2">Party Like It’s 1989: Yorkville's Kasa Moto is an unholy mix of spray tans, bottle service and spectacular sashimi</a></h2>
+
+<h1 itemprop="headline" class="sponsored-hed" >Party Like It’s 1989: Yorkville&#8217;s Kasa Moto is an unholy mix of spray tans, bottle service and spectacular sashimi</h1>
+</div>
+</article>
+
+
+
+<article class="feed-card feed-card-aside">
+<div class="feed-card-aside__image">
+<a href="http://torontolife.com/food/restaurants/toronto-restaurants-corktown-roselle-bakery-cocina-economica-pan-am-games/"><img src="http://cdn.torontolife.com/wp-content/uploads/2015/07/block-party-corktown-street-life-dining-scene-intro.jpg" class="feed__image wp-post-image" alt="" /></a>
+</div>
+<div class="feed-card-aside__info">
+<a  href="http://torontolife.com/category/food/restaurants/" class="card__label" data-label="Slot 3">Restaurants</a>
+
+<h2 class="feed-card-aside__headline"><a href="http://torontolife.com/food/restaurants/toronto-restaurants-corktown-roselle-bakery-cocina-economica-pan-am-games/" data-label="Slot 3">Block Party: Corktown has sprouted street life, and a bona fide dining scene, thanks to the Pan Am Games</a></h2>
+
+<h1 itemprop="headline" class="sponsored-hed" >Block Party: Corktown has sprouted street life, and a bona fide dining scene, thanks to the Pan Am Games</h1>
+</div>
+</article>
+
+
+
+<article class="feed-card feed-card-aside">
+<div class="feed-card-aside__image">
+<a href="http://torontolife.com/food/restaurants/the-critic-toronto-restaurants-hanmoto-lucky-red-asian-street-food/"><img src="http://cdn.torontolife.com/wp-content/uploads/2015/06/the-critic-toronto-restaurants-hanmoto-lucky-red-386x217.jpg" class="feed__image wp-post-image" alt="" /></a>
+</div>
+<div class="feed-card-aside__info">
+<a  href="http://torontolife.com/category/food/restaurants/" class="card__label" data-label="Slot 4">Restaurants</a>
+
+<h2 class="feed-card-aside__headline"><a href="http://torontolife.com/food/restaurants/the-critic-toronto-restaurants-hanmoto-lucky-red-asian-street-food/" data-label="Slot 4">Street Wise: how spots like Hanmoto and Lucky Red are bringing the pleasures of Asian street food indoors</a></h2>
+
+<h1 itemprop="headline" class="sponsored-hed" >Street Wise: how spots like Hanmoto and Lucky Red are bringing the pleasures of Asian street food indoors</h1>
+</div>
+</article>
+
+
+
+<article class="feed-card feed-card-aside">
+<div class="feed-card-aside__image">
+<a href="http://torontolife.com/food/restaurants/meat-co-restaurants-like-yorkvilles-opulent-nao-reinventing-steak-house/"><img src="http://cdn.torontolife.com/wp-content/uploads/2015/05/meat-and-co-slider.jpg" class="feed__image wp-post-image" alt="" /></a>
+</div>
+<div class="feed-card-aside__info">
+<a  href="http://torontolife.com/category/food/restaurants/" class="card__label" data-label="Slot 5">Restaurants</a>
+
+<h2 class="feed-card-aside__headline"><a href="http://torontolife.com/food/restaurants/meat-co-restaurants-like-yorkvilles-opulent-nao-reinventing-steak-house/" data-label="Slot 5">Meat and Co.: how restaurants like Yorkville's opulent NAO are reinventing the steak house</a></h2>
+
+<h1 itemprop="headline" class="sponsored-hed" >Meat and Co.: how restaurants like Yorkville&#8217;s opulent NAO are reinventing the steak house</h1>
+</div>
+</article>
+
+
+
+</section><!-- END GENERAL ARCHIVE LIST -->
+
+
+
+
+</div>
+		</div>
+<section class="ad-frame">
+  <div class="ad-frame--bigbox lower-big-box">
+
+  </div>
+</section> <!-- END SECOND BIG BOX -->
+
+</aside>
+
+
+
+
+
+<footer>
+
+  <nav>
+
+    <ul class="footer-menu">
+            <li id="menu-item-327560" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-327560 footer-menu__item"><a href="http://torontolife.com/about/">About</a></li>
+<li id="menu-item-327561" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-327561 footer-menu__item"><a href="https://secure.torontolife.com/subscribe.php">Subscriptions</a></li>
+<li id="menu-item-327563" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-327563 footer-menu__item"><a href="http://torontolife.com/advertise/">Advertise With Us</a></li>
+<li id="menu-item-348146" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-348146 footer-menu__item"><a href="http://torontolife.com/about/#privacy">Privacy Policy</a></li>
+    </ul>
+
+  </nav>
+
+
+</footer>
+
+
+
+
+
+
+
+
+<div id="sjm-dfp-leaderboard-wrapper" class="sjm-ad-wrapper" style="">
+<!-- SJM DFP Leaderboard -->
+<div id="sjm-dfp-leaderboard" style="">
+<script type='text/javascript' >
+googletag.cmd.push(function() { googletag.display('sjm-dfp-leaderboard'); });
+</script>
+</div>
+</div>
+
+
+<div id="sjm-dfp-upper-big-box-wrapper" class="sjm-ad-wrapper" style="">
+<!-- SJM DFP Upper Big Box -->
+<div id="sjm-dfp-upper-big-box" style="">
+<script type='text/javascript' >
+googletag.cmd.push(function() { googletag.display('sjm-dfp-upper-big-box'); });
+</script>
+</div>
+</div>
+
+
+<div id="sjm-dfp-sjm-gallery-leaderboard-wrapper" class="sjm-ad-wrapper" style="text-align:center;
+background:#fff;">
+<!-- SJM DFP SJM Gallery Leaderboard -->
+<div id="sjm-dfp-sjm-gallery-leaderboard" style="height: 100px;">
+<script type='text/javascript' >
+googletag.cmd.push(function() { googletag.display('sjm-dfp-sjm-gallery-leaderboard'); });
+</script>
+</div>
+</div>
+
+
+<div id="sjm-dfp-lower-big-box-wrapper" class="sjm-ad-wrapper" style="">
+<!-- SJM DFP Lower Big Box -->
+<div id="sjm-dfp-lower-big-box" style="">
+<script type='text/javascript' >
+googletag.cmd.push(function() { googletag.display('sjm-dfp-lower-big-box'); });
+</script>
+</div>
+</div>
+
+
+<div id="sjm-dfp-wallpaper-wrapper" class="sjm-ad-wrapper" style="position: fixed;
+top: 0;
+left: 50%;
+z-index: -100;
+margin-left: -1000px;
+background-color: transparent;
+height: 100%;">
+<!-- SJM DFP Wallpaper -->
+<div id="sjm-dfp-wallpaper" style="">
+<script type='text/javascript' >
+googletag.cmd.push(function() { googletag.display('sjm-dfp-wallpaper'); });
+</script>
+</div>
+</div>
+
+
+<div id="sjm-dfp-interstitial-wrapper" class="sjm-ad-wrapper" style="position:absolute;">
+<!-- SJM DFP Interstitial -->
+<div id="sjm-dfp-interstitial" style="">
+<script type='text/javascript' >
+googletag.cmd.push(function() { googletag.display('sjm-dfp-interstitial'); });
+</script>
+</div>
+</div>
+
+
+<div id="sjm-dfp-inblog-wrapper" class="sjm-ad-wrapper" style="">
+<!-- SJM DFP inblog -->
+<div id="sjm-dfp-inblog" style="background-color: #ffffff;
+text-align:center;">
+<script type='text/javascript' >
+googletag.cmd.push(function() { googletag.display('sjm-dfp-inblog'); });
+</script>
+</div>
+</div>
+<script>var sjm_dfp_autopos = [['sjm-dfp-leaderboard','APPEND','.leaderboard'],['sjm-dfp-upper-big-box','APPEND','.upper-big-box'],['sjm-dfp-sjm-gallery-leaderboard','PREPEND','#sjm-gallery-leaderboard-ad-wrapper'],['sjm-dfp-lower-big-box','APPEND','.lower-big-box'],['sjm-dfp-wallpaper','PREPEND','div.container.main'],['sjm-dfp-interstitial','PREPEND','body'],['sjm-dfp-inblog','AFTER','div.article-footer p.post-topics']];</script>
+
+
+<!-- Quantcast Tag -->
+<script type="text/javascript" data-cfasync="true">
+var _qevents = _qevents || [];
+(function() {
+var elem = document.createElement('script');
+elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+elem.async = true;
+elem.type = "text/javascript";
+var scpt = document.getElementsByTagName('script')[0];
+scpt.parentNode.insertBefore(elem, scpt);
+})();
+_qevents.push({
+qacct:"p-c54G_RnM5lvok",
+labels:"books"
+});
+</script>
+
+<noscript>
+<div style="display:none;">
+<img src="//pixel.quantserve.com/pixel/p-c54G_RnM5lvok.gif?labels=books" border="0" height="1" width="1" alt="Quantcast"/>
+</div>
+</noscript>
+<!-- End Quantcast tag -->
+<script type="text/javascript">
+		    /*** SJM Gallery call ***/
+			jQuery(document).ready(
+				function($) {
+
+					$(".sjm-gallery.active").sjmGallery(
+							{
+								gallery_item_selector: ".sjm-gallery-post-gallery-slide",
+								paginationSeparator: "/",
+								paginationAfter: "",
+								useFirstSlideInfoForBlank: 1,
+								animationSpeed: 200,
+								enableStateManagement : 1,
+								enableKeyboardControl : 1,
+								showCaptionLabel : "SHOW CAPTION",
+								hideCaptionLabel : "HIDE CAPTION",
+                                progressiveLoadRange : 10,
+                                triggerGApageviews: 1,
+                                imageLoadingMethod: "normal-load",
+                                enableImageZoom: 1,
+                                imageZoomLabel: "Click image to zoom",
+								enableCarousel: 1,
+
+								enableRelatedGallery: 1,
+								enableRelatedGalleryList: 1,
+								backToGalleryText: "&laquo; back to current gallery",
+
+								flexslider_properties: {
+									slider: {
+										touch:1,
+                                        mousewheel: 0,
+                                        animation: "slide",
+                                        animationSpeed: 250,
+                                        controlsContainer: "div#sjm-gallery-slider, div#sjm-gallery-mobile-direction, div#sjm-gallery-aside-nav",
+                                        animationLoop: 0
+
+									},
+									carousel: {
+										touch:1,
+										minItems:4,
+										maxItems:25,
+                                        itemWidth:75,
+										itemMargin:1,
+                                        controlNav: false,
+                                        directionNav: true,
+                                        animationLoop: 0
+
+									}
+								}
+							}
+					);
+
+				}
+			);
+		</script><script type='text/javascript' src='http://torontolife.com/wp-content/plugins/sjm-dfp-manager/js/sjm_dfp_gallery_connector.js?ver=045d1fdba088018bed3e38fe4098dd93'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var sjm_gaq = {"trackers":[{"id":"12","selector":"div.related-gallery div.related-gallery-inner a ","gaq_cat":"Related Galleries","disable_redirect":"0"},{"id":"17","selector":"#social-media a","gaq_cat":"Follow Us Buttons","disable_redirect":"0"},{"id":"18","selector":"div.sjm-gallery-slide-description a","gaq_cat":"Galleries Outbound","disable_redirect":"0"},{"id":"22","selector":".single .gallery .gallery-item a","gaq_cat":"Galleries Thumbnail","disable_redirect":"1"},{"id":"24","selector":".single a.viewgallery-link","gaq_cat":"Galleries Overlay","disable_redirect":"0"},{"id":"30","selector":".page-template-homepage .collection-top-stories a","gaq_cat":"Homepage Top Stories Module","disable_redirect":"0"},{"id":"31","selector":".page-template-homepage .feed-page a","gaq_cat":"Homepage Latest Stories Module","disable_redirect":"0"},{"id":"35","selector":"body.postid-346325 section.feed-in-post a","gaq_cat":"Matty Matheson chef kitchens sidebar","disable_redirect":"0"},{"id":"36","selector":"body.postid-346344 section.feed-in-post a","gaq_cat":"Ruth Tal chef kitchens sidebar","disable_redirect":"0"},{"id":"37","selector":"body.postid-346371 section.feed-in-post a","gaq_cat":"Nadege Nourian chef kitchens sidebar","disable_redirect":"0"},{"id":"39","selector":"body.postid-346996 section.feed-in-post a","gaq_cat":"16 Wendigo Way HOTW sidebar","disable_redirect":"0"},{"id":"40","selector":"body.postid-346284 section.feed-in-post a","gaq_cat":"Susur Lee chef kitchens sidebar","disable_redirect":"0"},{"id":"42","selector":"body.postid-347274 section.feed-in-post a","gaq_cat":"426 Queen East COTW sidebar","disable_redirect":"0"},{"id":"44","selector":"#sjm_calendar_todays_story_widget-5 a","gaq_cat":"Great Nights Out Featured Story","disable_redirect":"0"},{"id":"46","selector":".nav-small-bar .primary-navigation__list a","gaq_cat":"Top menu","disable_redirect":"0"},{"id":"47","selector":"#dsgnwrks_google_top_posts_widgets-11 a","gaq_cat":"Trending sidebar","disable_redirect":"0"},{"id":"48","selector":".nav-big-bar .primary-navigation__list a","gaq_cat":"Top menu initial load","disable_redirect":"0"},{"id":"49","selector":".nav-big-bar .social a","gaq_cat":"Top Menu social media initial load","disable_redirect":"0"},{"id":"51","selector":"#text-60 .feed-aside a","gaq_cat":"Big Stories","disable_redirect":"0"},{"id":"53","selector":"body.postid-348016 section.feed-in-post a","gaq_cat":"70 Roehampton SOTW sidebar","disable_redirect":"0"},{"id":"55","selector":"#gno-impression-tracker","gaq_cat":"Great Nights Out Homepage Widget","disable_redirect":"1"},{"id":"56","selector":"body.postid-343264 section.feed-in-post a","gaq_cat":"Emily Smibert Cost of Living sidebar","disable_redirect":"0"}],"tagtracking":[],"unbounce":"20","debug":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://torontolife.com/wp-content/plugins/sjm-gaq-trackers/js/sjm-gaq-trackers.js?ver=045d1fdba088018bed3e38fe4098dd93'></script>
+<script type='text/javascript' src='http://torontolife.com/wp-content/plugins/sjm-gaq-trackers/js/sjm_gaq_gallery_connector.js?ver=045d1fdba088018bed3e38fe4098dd93'></script>
+<script type='text/javascript' src='http://torontolife.com/wp-content/plugins/sjm-viral-alerts/sjm-viral-alerts-gallery-connector.js'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var pollsL10n = {"ajax_url":"http:\/\/torontolife.com\/wp-admin\/admin-ajax.php","text_wait":"Your last request is still being processed. Please wait a while ...","text_valid":"Please choose a valid poll answer.","text_multiple":"Maximum number of choices allowed: ","show_loading":"1","show_fading":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://torontolife.com/wp-content/plugins/wp-polls/polls-js.js?ver=045d1fdba088018bed3e38fe4098dd93'></script>
+<script type='text/javascript' src='http://torontolife.com/wp-content/plugins/sjm-gallery/js/jquery.flexslider-min.js?ver=045d1fdba088018bed3e38fe4098dd93'></script>
+<script type='text/javascript' src='http://torontolife.com/wp-content/plugins/sjm-gallery/js/jquery.sjm-gallery.min.js?ver=045d1fdba088018bed3e38fe4098dd93'></script>
+<script type='text/javascript' src='http://torontolife.com/wp-content/themes/sjm-underscores/sjm-gallery/theme.js?ver=045d1fdba088018bed3e38fe4098dd93'></script>
+<script type='text/javascript' src='http://torontolife.com/wp-content/themes/sjm-underscores/js/lib/fastclick.js?ver=045d1fdba088018bed3e38fe4098dd93'></script>
+<script type='text/javascript' src='http://torontolife.com/wp-content/themes/sjm-underscores/js/dist/sjm-scripts.min.js?ver=045d1fdba088018bed3e38fe4098dd93'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var toistSharing = {"target":"http:\/\/torontolife.com\/wp-admin\/admin-ajax.php","nonce":"a873ef2b18","url":"http:\/\/torontolife.com\/food\/restaurants\/chef-anthony-rose-and-sons-swan-diner-trinity-bellwoods-queen-west\/","post_id":"337614"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://torontolife.com/wp-content/plugins/sjm-toist-sharing/toist-sharing.js?ver=045d1fdba088018bed3e38fe4098dd93'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var embedVars = {"disqusConfig":{"platform":"wordpress@4.3.1","language":""},"disqusIdentifier":"337614 http:\/\/torontolife.com\/?p=337614","disqusShortname":"tlife","disqusTitle":"<h1 itemprop=\"headline\" class=\"sponsored-hed\" >How Anthony Rose became Toronto\u2019s comfort-food king<\/h1>","disqusUrl":"http:\/\/torontolife.com\/food\/restaurants\/chef-anthony-rose-and-sons-swan-diner-trinity-bellwoods-queen-west\/","options":{"manualSync":"1"},"postId":"337614"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://torontolife.com/wp-content/plugins/disqus-comment-system/media/js/disqus.js?ver=045d1fdba088018bed3e38fe4098dd93'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var countVars = {"disqusShortname":"tlife"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://torontolife.com/wp-content/plugins/disqus-comment-system/media/js/count.js?ver=045d1fdba088018bed3e38fe4098dd93'></script>
+
+</div><!--end container-->
+
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"712cadf856","applicationID":"4540169","transactionName":"MwdVMkFYWxFYVhILCgpNdgVHUFoMFkYPDAIIBw==","queueTime":0,"applicationTime":144,"atts":"H0BWRAlCSB8=","errorBeacon":"bam.nr-data.net","agent":"js-agent.newrelic.com\/nr-768.min.js"}</script></body>
+</html>
+
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Content Delivery Network via Amazon Web Services: CloudFront: cdn.torontolife.com
+
+ Served from: torontolife.com @ 2015-11-15 15:46:16 by W3 Total Cache -->

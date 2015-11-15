@@ -1,0 +1,29 @@
+{
+  "extends": "eslint:recommended",
+  "parser": "babel-eslint",
+  "ecmaFeatures": {
+    "jsx": true
+  },
+  "plugins": [],
+  "rules": {
+    "strict": [2, "global"],
+    "indent": [2, 2],
+    "quotes": [2, "single"],
+    "semi": [2, "always"],
+    "object-shorthand": [2, "always"],
+    "no-unused-vars": [1, {
+      "vars": "local",
+      "args": "none"
+    }],
+    "no-console": 1,
+    "comma-dangle": 1,
+    "object-shorthand": 1
+  },
+  "env": {
+    "node": true,
+    "es6": true
+  },
+  "globals": {
+    "fetch"
+  }
+}
