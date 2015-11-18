@@ -1,16 +1,17 @@
 'use strict';
 
 var fs = require('fs'),
+  path = require('path'),
   blurrd = require('./blurrd');
 
 var options = {
   max: 48,
-  selector: '#content img',
+  selector: 'img.singleimg',
   jsPath: '../src/client.js',
   cssPath: '../src/client.css'
 }
 
-var inputFile = process.argv[process.argv.length - 1];
+var inputFile = path.join(__dirname, 'examples', 'furbish.html');
 
 fs.readFile(inputFile, 'utf8', function(err, data) {
 
