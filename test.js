@@ -20,7 +20,7 @@ fs.readFile(inputFile, 'utf8', function(err, data) {
   }
 
   blurrd(data, options).then(function(result) {
-    fs.writeFile(inputFile.replace('.html', '-blurrd.html'), result);
+    fs.writeFile(inputFile.replace('examples', 'build'), result);
   });
 
 })
