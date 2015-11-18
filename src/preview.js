@@ -16,8 +16,6 @@ module.exports = {
    */
   reduce: function(src, max, cb) {
     gm(src)
-      .bitdepth(8)
-      .colors(256)
       .resize(max, max)
       .noProfile()
       .quality(75)

@@ -4,6 +4,12 @@
   -ms-filter: blur(0px);
   -o-filter: blur(0px);
   filter: blur(0px);
+  height: 100%;
+  width: 100%;
+}
+
+.blurrd-hidden-loader {
+  display: none !important
 }
 
 .blurrd-transition {
@@ -15,11 +21,11 @@
 }
 
 .blurrd-active {
-  -webkit-filter: blur(20px);
-  -moz-filter: blur(20px);
-  -ms-filter: blur(20px);
-  -o-filter: blur(20px);
-  filter: blur(20px);
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -ms-filter: blur(5px);
+  -o-filter: blur(5px);
+  filter: blur(5px);
 }
 
 .blurrd-parent {

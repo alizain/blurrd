@@ -32,7 +32,9 @@
 
   'use strict';
 
-  var imgs = window.jQuery('.blurrd-img');
+  var imgs = window.jQuery('img[data-blurrd-loader]');
+
+  console.log(imgs);
 
   imgs.each(function(index, el) {
     processImage(el);
@@ -40,21 +42,28 @@
 
   function processImage(el) {
 
-    console.log('processing');
+    var $el = $(el),
+      id = $el.attr('id'),
+      src = $el.attr('src'),
+      $actual = $('img[data-blurrd-src="' + id + '"]');
 
-    el = $(el);
+    el.onload = function() {
 
-    var src = (el).data('blurrd-src');
-    var proxy = new Image();
+      $actual.attr('src', src);
 
-    proxy.onload = function() {
+      $actual.removeClass('blurrd-active');
 
-      el.attr('src', src);
-      el.removeClass('blurrd-active');
+      window.setTimeout(function() {
+
+        $actual
+          .removeClass('blurrd-img')
+          .removeClass('blurrd-transition');
+        $el.remove();
+
+      }, 1000);
 
     };
 
-    proxy.src = src;
 
   }
 

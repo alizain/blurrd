@@ -2,6 +2,7 @@
 
 var P = require('bluebird'),
   fs = require('fs'),
+  url = require('url'),
   cheerio = require('cheerio'),
   request = require('request'),
   preview = require('./src/preview');
@@ -29,35 +30,46 @@ module.exports = function(src, options) {
 
       promises.push(new P(function(resolve, reject) {
 
-        var src = el.attr('src');
+        var src = el.attr('src'),
+          downloadSrc = url.parse(src);
+
+        if (!downloadSrc.protocol) {
+          downloadSrc.protocol = 'http:';
+        }
 
         request({
-          url: src,
+          url: url.format(downloadSrc),
           encoding: null
         }, function(err, res, body) {
 
-          preview.generate(body, options.max || 24, function(err, data) {
+          if(err) {
 
-            if(typeof data === 'string') {
+            reject(err);
 
-              var curr = id(6);
+          } else {
 
-              el.attr('src', data)
-                .attr('data-blurrd-id', curr)
-                .addClass('blurrd-img');
+            preview.generate(body, options.max || 24, function(err, data) {
 
-              $('body').prepend('<img src="' + src + '" id="' + curr + '" class="blurrd-hidden" style="display: none"/>')
+              if(typeof data === 'string') {
 
-              if(options.cssBlur) {
-                el.addClass('blurrd-transition')
+                var curr = id(6);
+
+                el.attr('src', data)
+                  .attr('data-blurrd-src', curr);
+
+                el.prepend('<img src="' + src + '" data-blurrd-loader id="' + curr + '" style="display: none"/>')
+
+                el.addClass('blurrd-img')
+                  .addClass('blurrd-transition')
                   .addClass('blurrd-active');
+
               }
 
-            }
+              resolve();
 
-            resolve();
+            });
 
-          });
+          }
 
         });
 
@@ -67,13 +79,11 @@ module.exports = function(src, options) {
 
     P.all(promises).then(function() {
 
-      if(options.cssBlur) {
-        if(options.cssPath) {
-          $('head').prepend('<link rel="stylesheet" type="text/css" href="' + options.cssPath + '"/>');
-        } else {
-          var css = fs.readFileSync('./src/client.css', 'utf8');
-          $('head').prepend('<style id="blurrd-client-style">' + css + '</style>');
-        }
+      if(options.cssPath) {
+        $('head').prepend('<link rel="stylesheet" type="text/css" href="' + options.cssPath + '"/>');
+      } else {
+        var css = fs.readFileSync('./src/client.css', 'utf8');
+        $('head').prepend('<style id="blurrd-client-style">' + css + '</style>');
       }
 
       if(options.jsPath) {
