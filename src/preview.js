@@ -16,7 +16,6 @@ module.exports = {
    */
   reduce: function(src, max, cb) {
     gm(src)
-      .colors(8)
       .resize(max, max)
       .noProfile()
       .quality(60)
