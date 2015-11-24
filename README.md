@@ -17,7 +17,7 @@ Require/import it in your application
 var blurrd = require('blurrd');
 ```
 
-Run it - **returns a promise**
+It returns a promise
 
 ```javascript
 blurrd(src, options)
@@ -28,7 +28,7 @@ blurrd(src, options)
 
 #### `src`
 
-The HTML source that needs to be process
+The HTML source that needs to be processed
 
 #### `options`
 
@@ -63,23 +63,30 @@ blurrd is really flexible. You can use different strategies/techniques to displa
 
 #### `basic`
 
-The built in transformer that works end-to-end. The following config options are available
+The built in transformer that works end-to-end. The following config options are available:
 
 ```javascript
 transformerOpts = {
+  // whether to inject the default css into the page
   injectCSS: true,
+  // whether to minify the css before injecting
   minifyCSS: true,
+  // whether to inject the default js into the page
   injectJS: true,
+  // whether to minify the js before injecting
   minifyJS: true,
-  transitionDuration: 0.8,
-  minimumWait: 0.25,
+  // css transition duration
+  transitionDuration: 0.8, // in seconds
+  // how long to wait after image load to replace blurred preview with original. helps avoid flicker when images are cached by the browser
+  minimumWait: 0.25, // in seconds
+  // css blur amount
   blurAmount: 10,
 }
 ```
 
 ## Usage - Command Line
 
-```
+```shell
 blurrd [options] <file>
 ```
 
