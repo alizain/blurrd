@@ -1,19 +1,11 @@
 'use strict';
 
 var P = require('bluebird'),
-  fs = require('fs'),
+  gm = require('gm'),
   url = require('url'),
   cheerio = require('cheerio'),
-  request = require('request'),
-  preview = require('./src/preview');
+  request = require('request');
 
-function id(len) {
-    var text = '';
-    var possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-    for(var i=0; i < len; i++)
-        text += possible.charAt(Math.floor(Math.random() * possible.length));
-    return text;
-}
 
 module.exports = function(src, options) {
 
@@ -33,8 +25,8 @@ module.exports = function(src, options) {
         var src = el.attr('src'),
           downloadSrc = url.parse(src);
 
-        if (!downloadSrc.protocol) {
-          downloadSrc.protocol = 'http:';
+        if (options.downloadProtocol) {
+          downloadSrc.protocol = options.downloadProtocol;
         }
 
         request({
@@ -48,26 +40,28 @@ module.exports = function(src, options) {
 
           } else {
 
-            preview.generate(body, options.max || 24, function(err, data) {
+            gm(body)
+              .resize(options.max || 24, options.max || 24)
+              .noProfile()
+              .quality(options.quality || 60)
+              .strip()
+              .type('optimize')
+              .toBuffer('JPG', function(err, raw) {
 
-              if(typeof data === 'string') {
+                if(err) {
 
-                var curr = id(6);
+                  reject(err);
 
-                el.attr('src', data)
-                  .attr('data-blurrd-src', curr);
+                } else {
 
-                el.prepend('<img src="' + src + '" data-blurrd-loader id="' + curr + '" style="display: none"/>')
+                  var dataUrl = 'data:image/jpg;base64,' + raw.toString('base64');
+                  el.attr('src', dataUrl);
+                  el = options.loader.transformImg(src, el, options);
+                  resolve();
 
-                el.addClass('blurrd-img')
-                  .addClass('blurrd-transition')
-                  .addClass('blurrd-active');
+                }
 
-              }
-
-              resolve();
-
-            });
+              });
 
           }
 
@@ -79,24 +73,16 @@ module.exports = function(src, options) {
 
     P.all(promises).then(function() {
 
-      if(options.cssPath) {
-        $('head').prepend('<link rel="stylesheet" type="text/css" href="' + options.cssPath + '"/>');
-      } else {
-        var css = fs.readFileSync('./src/client.css', 'utf8');
-        $('head').prepend('<style id="blurrd-client-style">' + css + '</style>');
-      }
-
-      if(options.jsPath) {
-        $('body').append('<script id="blurrd-client-script" src="' + options.jsPath + '"/>');
-      } else {
-        var js = fs.readFileSync('./src/client.js', 'utf8');
-        $('body').append('<script id="blurrd-client-script">' + js + '</script>');
-      }
+      options.loader.inject($, options);
 
       resolve($.html());
+
+    }, function(err) {
+
+      reject(err);
 
     });
 
   });
 
-}
+};

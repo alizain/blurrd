@@ -8,8 +8,9 @@ var options = {
   max: 48,
   selector: 'img.singleimg',
   jsPath: '../src/client.js',
-  cssPath: '../src/client.css'
-}
+  cssPath: '../src/client.css',
+  downloadProtocol: 'http:'
+};
 
 var inputFile = path.join(__dirname, 'examples', 'furbish.html');
 
