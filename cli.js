@@ -10,6 +10,7 @@
 
   var fs = require('fs'),
     pkg = require('./package.json'),
+    path = require('path'),
     mkdirp = require('mkdirp'),
     colors = require('colors'),
     blurrd = require('./blurrd'),
@@ -41,10 +42,16 @@
     max: program.max
   }).then(function(result) {
     if(program.out) {
-      mkdirp.sync(program.out);
-      console.log(program.out);
+      mkdirp.sync(path.dirname(program.out));
+      try {
+        fs.writeFileSync(program.out, result, 'utf8');
+      } catch(err) {
+        throw err.stack.red;
+      }
+      console.log('Done!'.green);
+    } else {
+      console.log(result);
     }
-    console.log(result);
   });
 
 })();
