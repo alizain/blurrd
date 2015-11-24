@@ -63,27 +63,31 @@ blurrd is really flexible. You can use different strategies/techniques to displa
 
 #### `basic`
 
-The built in transformer that works end-to-end. The following config options are available:
+Works end-to-end. The following config options are available:
 
 ```javascript
-transformerOpts = {
-  // whether to inject the default css into the page
-  injectCSS: true,
-  // whether to minify the css before injecting
-  minifyCSS: true,
-  // whether to inject the default js into the page
-  injectJS: true,
-  // whether to minify the js before injecting
-  minifyJS: true,
-  // css transition duration
-  transitionDuration: 0.8, // in seconds
-  // how long to wait after image load to replace
-  // blurred preview with original. helps avoid
-  // flicker when images are cached by the browser
-  minimumWait: 0.25, // in seconds
-  // css blur amount
-  blurAmount: 10,
-}
+blurrd(src, {
+  // other options
+  transformer: 'basic',
+  transformerOpts: {
+    // whether to inject the default css into the page
+    injectCSS: true,
+    // whether to minify the css before injecting
+    minifyCSS: true,
+    // whether to inject the default js into the page
+    injectJS: true,
+    // whether to minify the js before injecting
+    minifyJS: true,
+    // css transition duration
+    transitionDuration: 0.8, // in seconds
+    // how long to wait after image load to replace
+    // blurred preview with original. helps avoid
+    // flicker when images are cached by the browser
+    minimumWait: 0.25, // in seconds
+    // css blur amount
+    blurAmount: 10,
+  }
+});
 ```
 
 #### `lazyload`
@@ -93,10 +97,14 @@ Another built-in transformer that works with [jquery_lazyload](https://github.co
 **NOTE** This transformer injects no javascript on the page. You are responsible for loading `jquery_lazyload` and running `$('img').lazyload()` however you want.
 
 ```javascript
-transformerOpts = {
-  // add `lazy` to the image elements for lazyload
-  addLazyClass: true
-}
+blurrd(src, {
+  // other options
+  transformer: 'lazyload',
+  transformerOpts = {
+    // add `lazy` to the image elements for lazyload
+    addLazyClass: true
+  }
+});
 ```
 
 ## Usage - Command Line
