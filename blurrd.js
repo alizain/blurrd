@@ -13,60 +13,70 @@ if(typeof Promise !== 'function') {
 
 module.exports = function(src, options) {
 
-  var funcs;
-
-  options = _.merge({
-    cheerio: {},
-    selector: 'img',
-    max: 24,
-    quality: 60,
-    dlProtocol: 'http:',
-    transformer: 'basic'
-  }, options);
-
-  if(typeof options.transformer === 'object') {
-
-    funcs = options.transformer;
-
-  } else if(typeof options.transformer === 'string') {
-
-    try {
-      funcs = require(options.transformer);
-    } catch(err) {
-      funcs = undefined;
-    }
-
-    if(!funcs) {
-      try {
-        funcs = require(path.join(__dirname, 'transformers', options.transformer));
-      } catch(err) {
-        throw new Error(options.transformer + ' is not a valid path or one of the default transformers');
-      }
-    }
-
-  } else {
-
-    throw new Error('malformed option for transformer');
-
-  }
-
   return new Promise(function(resolve, reject) {
 
-    var promises = [];
+    var funcs;
+
+    options = _.merge({
+      cheerio: {},
+      selector: 'img',
+      max: 24,
+      quality: 60,
+      dlProtocol: 'http:',
+      transformer: 'basic',
+      transformerOpts: {}
+    }, options);
+
+    if(typeof options.transformer === 'object') {
+
+      funcs = options.transformer;
+
+    } else if(typeof options.transformer === 'string') {
+
+      try {
+        funcs = require(options.transformer);
+      } catch(err) {
+        funcs = undefined;
+      }
+
+      if(!funcs) {
+        try {
+          funcs = require(path.join(__dirname, 'transformers', options.transformer));
+        } catch(err) {
+          throw new Error(options.transformer + ' is not a valid path or one of the default transformers');
+        }
+      }
+
+    } else {
+
+      throw new Error('malformed option for transformer');
+
+    }
+
+    [
+      'prepareImg',
+      'inject'
+    ].forEach(function(key) {
+      if(typeof funcs[key] !== 'function') {
+        throw new Error(`transformer must have a ${key} function`);
+      }
+    });
+
+    var imgPromises = [];
 
     var $ = cheerio.load(src, options.cheerio),
-      imgs = $(options.selector);
+      imgElements = $(options.selector);
 
-    imgs.each(function(index, el) {
+    imgElements.each(function(index, el) {
 
       el = $(this);
 
-      promises.push(new Promise(function(resolve, reject) {
+      imgPromises.push(new Promise(function(resolve, reject) {
 
         var src = el.attr('src'),
           dlSrc = url.parse(src);
 
-        if (options.dlProcotol) {
+        if (!dlSrc.protocol) {
           dlSrc.protocol = options.dlProcotol;
         }
 
@@ -95,7 +105,7 @@ module.exports = function(src, options) {
 
                 } else {
 
-                  funcs.prepareImg(src, raw, el, options);
+                  funcs.prepareImg(src, raw, el, options.transformerOpts);
                   resolve();
 
                 }
@@ -110,9 +120,9 @@ module.exports = function(src, options) {
 
     });
 
-    Promise.all(promises).then(function() {
+    Promise.all(imgPromises).then(function() {
 
-      funcs.inject($, options);
+      funcs.inject($, options.transformerOpts);
       resolve($.html());
 
     }, function(err) {

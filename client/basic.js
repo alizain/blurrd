@@ -1,34 +1,49 @@
+/*eslint-env browser*/
+/*eslint strict: [2, "function"]*/
+
 (function(window) {
 
   'use strict';
 
-  var imgs = window.jQuery('img[data-blurrd-loader]');
+  var imgs = document.querySelectorAll('img[data-blurrd-loader]'),
+    imgsLen = imgs.length;
 
-  imgs.each(function(index, el) {
-    processImage(el);
-  });
+  for (var i = 0; i < imgsLen; i++) {
+    processImage(imgs[i]);
+  }
 
   function processImage(el) {
 
-    var $el = $(el),
-      id = $el.attr('id'),
-      src = $el.attr('src'),
-      $actual = $('img[data-blurrd-src="' + id + '"]');
+    var id = el.getAttribute('id'),
+      src = el.getAttribute('src'),
+      actual = document.querySelector('img[data-blurrd-src="' + id + '"]');
+
+    if(!actual) {
+      return;
+    }
 
     el.onload = function() {
 
-      $actual.attr('src', src);
-
-      $actual.removeClass('blurrd-active');
-
       window.setTimeout(function() {
 
-        $actual
-          .removeClass('blurrd-img')
-          .removeClass('blurrd-transition');
-        $el.remove();
+        window.requestAnimationFrame(function() {
 
-      }, 1000);
+          actual.setAttribute('src', src);
+
+          actual.className = actual.className.replace('blurrd-active', '');
+
+          window.setTimeout(function() {
+
+            actual.className = actual.className
+              .replace('blurrd-img', '')
+              .replace('blurrd-transition', '');
+            el.remove();
+
+          }, parseInt(<%= transitionDuration %> * 1000));
+
+        });
+
+      }, parseInt(<%= minimumWait %> * 1000));
 
     };
 
