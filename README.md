@@ -6,7 +6,7 @@ Compatible with [jquery_lazyload](https://github.com/tuupola/jquery_lazyload)!
 
 ## Install
 
-```javascript
+```shell
 npm install blurrd
 ```
 
