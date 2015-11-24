@@ -20,13 +20,14 @@
     .version(pkg.version)
     .usage('[options] <file>')
     .option('-s, --selector [value]', 'Image selector for cheerio')
+    .option('-t, --transformer [value]', 'lazyload|basic (default)', /^(basic|lazyload)$/i, 'basic')
     .option('-q, --quality [value]', 'Image compression quality factor', parseInt)
     .option('-m, --max [value]', 'Maximum image dimensions', parseInt)
     .option('-o, --out [value]', 'Output file')
     .parse(process.argv);
 
   if(program.args.length === 0) {
-    return console.log('No input file provided, exiting!'.red);
+    return console.log('No input file provided!'.red);
   }
 
   var html;
@@ -39,6 +40,7 @@
   blurrd(html, {
     selector: program.selector,
     quality: program.quality,
+    transformer: program.transformer,
     max: program.max
   }).then(function(result) {
     if(program.out) {
