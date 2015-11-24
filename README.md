@@ -1,6 +1,6 @@
 # Blurrd
 
-Generate blurred previews for images! Check out the [video demo](https://www.youtube.com/watch?v=4HTpcauWaLs)!
+Generate blurred previews for images! Check out the **[video demo](https://www.youtube.com/watch?v=4HTpcauWaLs)**!
 
 Uses [cheerio](https://github.com/cheeriojs/cheerio) under the hood to parse HTML.
 
