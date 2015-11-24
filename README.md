@@ -48,7 +48,7 @@ options: {
   quality: 60,
   // used when the src in an image does not have a protocol
   dlProtocol: 'http:',
-  // the default transformer
+  // document transformers
   transformer: 'basic',
   // options to pass on to the transformer
   transformerOpts: {
@@ -77,10 +77,25 @@ transformerOpts = {
   minifyJS: true,
   // css transition duration
   transitionDuration: 0.8, // in seconds
-  // how long to wait after image load to replace blurred preview with original. helps avoid flicker when images are cached by the browser
+  // how long to wait after image load to replace
+  // blurred preview with original. helps avoid
+  // flicker when images are cached by the browser
   minimumWait: 0.25, // in seconds
   // css blur amount
   blurAmount: 10,
+}
+```
+
+#### `lazyload`
+
+Another built-in transformer that works with [jquery_lazyload](https://github.com/tuupola/jquery_lazyload).
+
+**NOTE** This transformer injects no javascript on the page. You are responsible for loading `jquery_lazyload` and running `$('img').lazyload()` however you want.
+
+```javascript
+transformerOpts = {
+  // add `lazy` to the image elements for lazyload
+  addLazyClass: true
 }
 ```
 
@@ -107,6 +122,29 @@ Available Options:
 ## Custom Transformers
 
 Custom transformers must be an object with two methods - `prepareImg` & `inject`.
+
+To use a custom transformer, specify the path in `options.transformer`
+
+```javascript
+blurrd(src, {
+  transformer: '../path/to/transformer.js'
+});
+```
+
+Or, load the functions directly
+
+```javascript
+blurrd(src, {
+  transformer: {
+    prepareImg: function(srcUrl, imgBuffer, imgEl, options) {
+      // do stuff
+    },
+    inject: function($, options) {
+      // win!
+    }
+  }
+})
+```
 
 #### `prepareImg(srcUrl, imgBuffer, imgEl, options)`
 
