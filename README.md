@@ -10,6 +10,30 @@ Compatible with [jquery_lazyload](https://github.com/tuupola/jquery_lazyload)!
 npm install blurrd
 ```
 
+## Usage - Command Line
+
+```shell
+blurrd [options] <file>
+```
+
+The simplest way to get started!
+
+```shell
+blurrd -o some/output/file.html input.html
+```
+
+Available Options
+
+```shell
+  -h, --help                 output usage information
+  -V, --version              output the version number
+  -s, --selector [value]     Image selector for cheerio
+  -t, --transformer [value]  lazyload|basic (default)
+  -q, --quality [value]      Image compression quality factor
+  -m, --max [value]          Maximum image dimensions
+  -o, --out [value]          Output file
+```
+
 ## Usage - API
 
 Require/import it in your application
@@ -105,26 +129,6 @@ blurrd(src, {
     addLazyClass: true
   }
 });
-```
-
-## Usage - Command Line
-
-```shell
-blurrd [options] <file>
-```
-
-The command line version doesn't have the full flexibility of the
-
-```
-Available Options:
-
-  -h, --help                 output usage information
-  -V, --version              output the version number
-  -s, --selector [value]     Image selector for cheerio
-  -t, --transformer [value]  lazyload|basic (default)
-  -q, --quality [value]      Image compression quality factor
-  -m, --max [value]          Maximum image dimensions
-  -o, --out [value]          Output file
 ```
 
 ## Custom Transformers
