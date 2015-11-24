@@ -10,6 +10,7 @@
 
   var fs = require('fs'),
     pkg = require('./package.json'),
+    mkdirp = require('mkdirp'),
     colors = require('colors'),
     blurrd = require('./blurrd'),
     program = require('commander');
@@ -31,11 +32,7 @@
   try {
     html = fs.readFileSync(program.args[0], 'utf8');
   } catch(err) {
-    if(err.code === 'ENOENT') {
-      return console.log((program.args[0] + ' is not a valid path').red);
-    } else {
-      throw err;
-    }
+    throw err.stack.red;
   }
 
   blurrd(html, {
@@ -43,9 +40,11 @@
     quality: program.quality,
     max: program.max
   }).then(function(result) {
+    if(program.out) {
+      mkdirp.sync(program.out);
+      console.log(program.out);
+    }
     console.log(result);
-  }, function(err) {
-    console.log(err.toString().red);
   });
 
 })();

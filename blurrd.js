@@ -55,7 +55,6 @@ module.exports = function(src, options) {
 
     [
       'prepareImg',
-      'boo',
       'inject'
     ].forEach(function(key) {
       if(typeof funcs[key] !== 'function') {
