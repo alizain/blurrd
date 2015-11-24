@@ -1,25 +1,23 @@
 # Blurrd
 
-Generate blurred previews for images! Checkout the [video demo](https://www.youtube.com/watch?v=4HTpcauWaLs)
-
-Uses [cheerio](https://github.com/cheeriojs/cheerio) to parse HTML.
+Generate blurred previews for images! Checkout the [video demo](https://www.youtube.com/watch?v=4HTpcauWaLs). Uses [cheerio](https://github.com/cheeriojs/cheerio) under the hood to parse HTML.
 
 ## Install
 
-```
+```javascript
 npm install blurrd
 ```
 
 ## Usage - API
 
 Require/import it in your application
-```
+```javascript
 var blurrd = require('blurrd');
 ```
 
 Run it!
 
-```
+```javascript
 // returns a promise
 blurrd(src, options)
   .then(function() {
@@ -27,22 +25,27 @@ blurrd(src, options)
   });
 ```
 
-**`src`**
+#### `src`
 
 The HTML source that needs to be process
 
 #### `options`
 
-An object used to configure the processor
+An object with the following possible values (defaults are shown);
 
-```
+```javascript
 options: {
-  cheerio: {
-    // options hash to pass on to cheerio
-  },
+  // options hash to pass on to cheerio
+  cheerio: {},
+  // selector used by cheerio to get all images
   selector: 'img',
+  // maximum dimensions of processed image.
+  // increasing this will dramatically increase
+  // the size of the initial page load
   max: 24,
+  // quality factor for graphicsmagick
   quality: 60,
+  // used when the src in an image does not have a protocol
   dlProtocol: 'http:',
   transformer: 'basic',
   transformerOpts: {
@@ -53,7 +56,9 @@ options: {
 
 ## Usage - Command Line
 
-`blurrd [options] <file>`
+```
+blurrd [options] <file>
+```
 
 The command line version doesn't have the full flexibility of the
 
