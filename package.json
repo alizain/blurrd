@@ -4,7 +4,7 @@
   "description": "Blurred image previews on the web",
   "main": "blurrd.js",
   "scripts": {
-    "test": "./node_modules/.bin/mocha"
+    "test": "mocha"
   },
   "author": "Alizain Feerasta",
   "license": "MIT",
@@ -20,6 +20,7 @@
     "bluebird": "^3.0.5",
     "cheerio": "^0.19.0",
     "clean-css": "^3.4.8",
+    "colors": "^1.1.2",
     "gm": "^1.21.1",
     "lodash": "^3.10.1",
     "request": "^2.65.0",
@@ -29,11 +30,16 @@
     "type": "git",
     "url": "git+https://github.com/alizain/blurrd.git"
   },
+  "preferGlobal": true,
   "bin": {
     "blurrd": "./cli.js"
   },
   "bugs": {
     "url": "https://github.com/alizain/blurrd/issues"
   },
-  "homepage": "https://github.com/alizain/blurrd#readme"
+  "homepage": "https://github.com/alizain/blurrd#readme",
+  "directories": {
+    "example": "examples",
+    "test": "test"
+  }
 }
