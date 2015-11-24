@@ -2,6 +2,8 @@
 
 Generate blurred previews for images! Checkout the [video demo](https://www.youtube.com/watch?v=4HTpcauWaLs). Uses [cheerio](https://github.com/cheeriojs/cheerio) under the hood to parse HTML.
 
+Compatible with [jquery_lazyload](https://github.com/tuupola/jquery_lazyload)!
+
 ## Install
 
 ```javascript
@@ -15,13 +17,12 @@ Require/import it in your application
 var blurrd = require('blurrd');
 ```
 
-Run it!
+Run it - **returns a promise**
 
 ```javascript
-// returns a promise
 blurrd(src, options)
-  .then(function() {
-
+  .then(function(result) {
+    fs.writeFileSync('output.html', result, 'utf8');
   });
 ```
 
@@ -47,10 +48,32 @@ options: {
   quality: 60,
   // used when the src in an image does not have a protocol
   dlProtocol: 'http:',
+  // the default transformer
   transformer: 'basic',
+  // options to pass on to the transformer
   transformerOpts: {
     // options hash to pass on to the transformer
   }
+}
+```
+
+## Available Transformers
+
+blurrd is really flexible. You can use different strategies/techniques to display the image preview and load the actual image in the browser. There are two bundled in transformers - `basic` & `lazyload`
+
+#### `basic`
+
+The built in transformer that works end-to-end. The following config options are available
+
+```javascript
+transformerOpts = {
+  injectCSS: true,
+  minifyCSS: true,
+  injectJS: true,
+  minifyJS: true,
+  transitionDuration: 0.8,
+  minimumWait: 0.25,
+  blurAmount: 10,
 }
 ```
 
