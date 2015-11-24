@@ -12,7 +12,7 @@ function id(len) {
 
 module.exports = {
 
-  transformImg(src, imgEl, opts) {
+  transformImg(srcUrl, imgBuffer, imgEl, options) {
     var curr = id(6);
     imgEl.attr('data-blurrd-src', curr);
     imgEl.prepend('<img src="' + src + '" data-blurrd-loader id="' + curr + '" style="display: none"/>');
@@ -21,15 +21,15 @@ module.exports = {
       .addClass('blurrd-active');
   },
 
-  inject($, opts) {
-    if(opts.cssPath) {
-      $('head').prepend('<link rel="stylesheet" type="text/css" href="' + opts.cssPath + '"/>');
+  inject($, options) {
+    if(options.cssPath) {
+      $('head').prepend('<link rel="stylesheet" type="text/css" href="' + options.cssPath + '"/>');
     } else {
       var css = fs.readFileSync('./client.css', 'utf8');
       $('head').prepend('<style id="blurrd-client-style">' + css + '</style>');
     }
-    if(opts.jsPath) {
-      $('body').append('<script id="blurrd-client-script" src="' + opts.jsPath + '"/>');
+    if(options.jsPath) {
+      $('body').append('<script id="blurrd-client-script" src="' + options.jsPath + '"/>');
     } else {
       var js = fs.readFileSync('./client.js', 'utf8');
       $('body').append('<script id="blurrd-client-script">' + js + '</script>');

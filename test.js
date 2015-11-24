@@ -9,7 +9,7 @@ var options = {
   selector: 'img.singleimg',
   jsPath: '../src/client.js',
   cssPath: '../src/client.css',
-  downloadProtocol: 'http:'
+  dlProtocol: 'http:'
 };
 
 var inputFile = path.join(__dirname, 'examples', 'furbish.html');
@@ -24,4 +24,4 @@ fs.readFile(inputFile, 'utf8', function(err, data) {
     fs.writeFile(inputFile.replace('examples', 'build'), result);
   });
 
-})
+});

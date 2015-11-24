@@ -1,36 +1,77 @@
 'use strict';
 
-var P = require('bluebird'),
+var _ = require('lodash'),
   gm = require('gm'),
   url = require('url'),
+  path = require('path'),
   cheerio = require('cheerio'),
   request = require('request');
 
+if(typeof Promise !== 'function') {
+  var Promise = require('bluebird');
+}
 
 module.exports = function(src, options) {
 
-  return new P(function(resolve, reject) {
+  var funcs;
+
+  options = _.merge({
+    cheerio: {},
+    selector: 'img',
+    max: 24,
+    quality: 60,
+    dlProtocol: 'http:',
+    transformer: 'basic'
+  }, options);
+
+  if(typeof options.transformer === 'object') {
+
+    funcs = options.transformer;
+
+  } else if(typeof options.transformer === 'string') {
+
+    try {
+      funcs = require(options.transformer);
+    } catch(err) {
+      funcs = undefined;
+    }
+
+    if(!funcs) {
+      try {
+        funcs = require(path.join(__dirname, 'transformers', options.transformer));
+      } catch(err) {
+        throw new Error(options.transformer + ' is not a valid path or one of the default transformers');
+      }
+    }
+
+  } else {
+
+    throw new Error('malformed option for transformer');
+
+  }
+
+  return new Promise(function(resolve, reject) {
 
     var promises = [];
 
-    var $ = cheerio.load(src),
-      imgs = $(options.selector || 'img');
+    var $ = cheerio.load(src, options.cheerio),
+      imgs = $(options.selector);
 
     imgs.each(function(index, el) {
 
       el = $(this);
 
-      promises.push(new P(function(resolve, reject) {
+      promises.push(new Promise(function(resolve, reject) {
 
         var src = el.attr('src'),
-          downloadSrc = url.parse(src);
+          dlSrc = url.parse(src);
 
-        if (options.downloadProtocol) {
-          downloadSrc.protocol = options.downloadProtocol;
+        if (options.dlProcotol) {
+          dlSrc.protocol = options.dlProcotol;
         }
 
         request({
-          url: url.format(downloadSrc),
+          url: url.format(dlSrc),
           encoding: null
         }, function(err, res, body) {
 
@@ -41,9 +82,9 @@ module.exports = function(src, options) {
           } else {
 
             gm(body)
-              .resize(options.max || 24, options.max || 24)
+              .resize(options.max, options.max)
               .noProfile()
-              .quality(options.quality || 60)
+              .quality(options.quality)
               .strip()
               .type('optimize')
               .toBuffer('JPG', function(err, raw) {
@@ -54,9 +95,7 @@ module.exports = function(src, options) {
 
                 } else {
 
-                  var dataUrl = 'data:image/jpg;base64,' + raw.toString('base64');
-                  el.attr('src', dataUrl);
-                  el = options.loader.transformImg(src, el, options);
+                  funcs.prepareImg(src, raw, el, options);
                   resolve();
 
                 }
@@ -71,10 +110,9 @@ module.exports = function(src, options) {
 
     });
 
-    P.all(promises).then(function() {
+    Promise.all(promises).then(function() {
 
-      options.loader.inject($, options);
-
+      funcs.inject($, options);
       resolve($.html());
 
     }, function(err) {
